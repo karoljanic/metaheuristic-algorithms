@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[top=3cm, bottom=3cm, left = 2cm, right = 2cm]{geometry}
+\geometry{a4paper}
+\usepackage[T1]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{titling}
+\usepackage{caption}
+\usepackage[parfill]{parskip}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{pgffor}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+
+\begin{titlingpage}
+    \title{Algorytmy metaheurystyczne\\[1ex] \large Problem komiwojażera euklidesowego. Drzewo MST. Losowe cykle.}
+    \author{Karol Janic}
+    \date{27 października 2023}
+
+    \maketitle
+\end{titlingpage}
+
+\tableofcontents
+
+\newpage
+
+\section{Cel zadania}
+Celem zadania jest sprawdzenie dwóch metod podających kandydatów problemu komiwojażera i porównanie ich. Jedną metodą jest generowanie losowego cyklu zaś drugim rozwiązanie oparte na drzewie MST.
+
+\section{Generowanie kandydata}
+\subsection{Losowy cykl}
+Tworzymy permutację z wierzchołków grafu reprezentującego instancję problemu. Następnie przy użyciu algorytmu Fisher-Yates mieszamy ją. 
+
+\subsection{Kandydat generowany przy użyciu MST}
+W grafie reprezentującym instancję problemu przy użyciu algorytmu Prim'a generujemy minimalne drzewo rozpinające. Potem przechodzimy je algorytmem DFS. Kolejność odwiedzania wierzchołków wyznacza kolejne elementy permutacji reprezentującej kandydata.
+
+\section{Wyniki}
+Zaimplementowane metody zostały porównane na przykładach z \url{https://www.math.uwaterloo.ca/tsp/vlsi/index.html}. Wyniki prezentują się następująco:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \multirow{3}{*}{Przykład} & Suma & Suma wag & Średnia z minimum & Średnia z minimum  & Minimalna suma  \\
+        & wag & kandydata & wag kandydatów dla & wag kandydatów dla & wag z 1000 \\
+        & MST & opartego o MST & każdych 10 losowań & każdych 50 losowań  & losowych kandydatów \\
+        \hline
+        xqf131 & 474 & 718 & 4343.43 & 4216.45 & 3984 \\
+        \hline
+        xqg237 & 897 & 1445 & 11800.29 & 11498.35 & 10899 \\
+        \hline
+        pma343 & 1179 & 1883 & 34357.82 & 33356.65 & 32441 \\
+        \hline
+        pka379 & 1151 & 1855 & 35373.18 & 34531.9 & 33280 \\
+        \hline
+        bcl380 & 1444 & 2319 & 24697.87 & 24267.7 & 23973 \\
+        \hline
+        pbl395 & 1124 & 1871 & 19206.86 & 18888.85 & 18399 \\
+        \hline
+        pbk411 & 1180 & 1935 & 21641.72 & 21276.8 & 20701 \\
+        \hline
+        pbn423 & 1201 & 1918 & 21942.46 & 21592.2 & 21158 \\
+        \hline
+        pbm436 & 1269 & 2119 & 22510.76 & 22133.8 & 21358 \\
+        \hline
+        xql662 & 2240 & 3691 & 51185.66 & 50433.2 & 48914 \\
+        \hline
+    \end{tabular}
+    \caption{Porównanie metod generowania kandydatów dla problemu komiwojażera.}
+\end{table}
+
+\section{Wnioski}
+\begin{itemize}
+    \item suma wag kandydata budowanego na podstawie MST nie przekracza dwukrotnej sumy wag krawędzi MST
+    \item kandydat budowany na podstawie MST może zostać ulepszony poprzez usunięcie skrzyżowań
+    \item suma wag kandydata generowanego w sposób losowy jest zdecydowanie większa od sumy wag kandydata budowanego na podstawie MST
+    \item średnia z minimum wag kandydatów losowych jest mniejsza gdy próbkowane grupy są większe
+\end{itemize}
+
+\newpage
+
+\section{Wizualizacje rozwiązań}
+\def \myArray{xqf131, xqg237, pma343, pka379, bcl380, pbl395, pbk411, pbn423, pbm436, xql662}
+
+\foreach \text in \myArray {
+    \subsection{\text}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[height=6.5cm]{../../plots/\text-mst.png}
+    \end{figure}
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[height=6.5cm]{../../plots/\text-tsp-mst.png}
+    \end{figure}
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[height=6.5cm]{../../plots/\text-rand.png}
+    \end{figure}
+
+    \newpage
+}
+
+\end{document}
