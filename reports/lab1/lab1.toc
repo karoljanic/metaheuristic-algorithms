@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Cel zadania}{2}{section.1}%
+\contentsline {section}{\numberline {2}Algorytm Local Search}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Otoczenie invert}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Moc otoczenia}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Własność ruchu invert}{2}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Problem nierówności trójkąta przy zaokrąglaniu}{3}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Wybór rozwiązania początkowego}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Przegląd sąsiedztwa}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Generowanie najlepszego kandydata}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Wyniki}{3}{section.3}%
+\contentsline {section}{\numberline {4}Wnioski}{4}{section.4}%

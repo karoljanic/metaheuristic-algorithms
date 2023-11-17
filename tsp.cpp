@@ -1,27 +1,21 @@
 #include <iostream>
 #include <cinttypes>
 #include <fstream>
-#include <stack>
-#include <math.h>
-#include <random>
-#include <algorithm>
 
-#include "Graph.hpp"
+#include "utils.hpp"
+#include "local-search.hpp"
 
-constexpr bool GENERATE_RANDOM_CYLCE_TEST = true;
-constexpr bool GENERATE_MST_BASE_CYCLE_TEST = true;
+constexpr bool GENERATE_RANDOM_CYLCE_TEST = false;
+constexpr bool GENERATE_MST_BASE_CYCLE_TEST = false;
+constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_MST_TEST = false;
+constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_TEST = true;
+constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_NEIGHBOURHOOD_RANDOM_TEST = false;
 
 const std::vector<std::string> testCases {
     "xqf131", "xqg237", "pma343", "pka379", "bcl380",
-    "pbl395", "pbk411", "pbn423", "pbm436", "xql662"
+    "pbl395", "pbk411", "pbn423", "pbm436", "xql662",
+    "xit1083", "icw1483", "djc1785", "dcb2086", "pds2566"
 };
-
-struct Coordinate {
-    int_fast32_t x;
-    int_fast32_t y;
-};
-
-typedef Graph<int_fast32_t> ProblemGraph;
 
 
 std::string readTest(const std::string& testCase, std::vector<Coordinate>& points) {
@@ -47,35 +41,7 @@ std::string readTest(const std::string& testCase, std::vector<Coordinate>& point
     return fileName;
 }
 
-
-int_fast32_t distance(const Coordinate& firstPoint, const Coordinate& secondPoint) {
-    return static_cast<int_fast32_t>(sqrt(pow(firstPoint.x - secondPoint.x, 2) + pow(firstPoint.y - secondPoint.y, 2)) + 0.5);
-}
-
-int_fast32_t cycleWeight(const std::vector<Coordinate> points, const std::vector<size_t> cycle) {
-    int_fast32_t cycleWeight{0};
-
-    for(size_t i = 0; i < cycle.size(); i++) {
-        cycleWeight += distance(points[cycle[i] - 1], points[cycle[(i + 1) % cycle.size()] - 1]);
-    }
-
-    return cycleWeight;
-}
-
-ProblemGraph initializeGraph(const std::vector<Coordinate>& points) {
-    ProblemGraph graph{points.size()};
-
-    for(size_t firstVertex = 0; firstVertex < points.size(); firstVertex++) {
-        for(size_t secondVertex = firstVertex + 1; secondVertex < points.size(); secondVertex++) {
-            graph.addEdge(firstVertex + 1, secondVertex + 1, distance(points[firstVertex], points[secondVertex]));
-        }
-    }
-
-    return graph;
-}
-
-
-void testRandomTsp(const std::vector<Coordinate>& points, std::string testCaseName) {
+void testRandomTsp(const std::vector<Coordinate>& points, const std::string& testCaseName) {
     constexpr size_t REPS{1000};
 
     std::mt19937 gen{std::random_device{}()};
@@ -97,8 +63,7 @@ void testRandomTsp(const std::vector<Coordinate>& points, std::string testCaseNa
     }
 }
 
-
-void testMstTsp(const std::vector<Coordinate>& points, std::string testCaseName) {
+void testMstTsp(const std::vector<Coordinate>& points, const std::string& testCaseName) {
     constexpr size_t startVertex{1};
 
     const ProblemGraph graph = initializeGraph(points);
@@ -113,6 +78,7 @@ void testMstTsp(const std::vector<Coordinate>& points, std::string testCaseName)
 
     std::ofstream mstOutputFile{"results/" + testCaseName + "-mst.txt"};
     mstOutputFile << "weight: " << mstWeight << std::endl << "edges: " << std::endl;
+
     for(const auto& edge: mst.getEdges()) {
         mstOutputFile << edge.sourceVertex << " " << edge.targetVertex << std::endl;;
     }
@@ -124,8 +90,101 @@ void testMstTsp(const std::vector<Coordinate>& points, std::string testCaseName)
         tspMstOutputFile << salesmanCycle[vertexPos] << std::endl;
     }
     tspMstOutputFile << std::endl;
+}
 
-    std::cout << "MST weight: " << mstWeight << std::endl << "salesman cycle weight: " << salesmanCycleWeight << std::endl << std::endl;
+
+void testLocalSearchBasedOnMstInitTsp(const std::vector<Coordinate>& points, const std::string& testCaseName) {
+    constexpr size_t mstStartVertex{1};
+
+    const ProblemGraph graph = initializeGraph(points);
+
+    ProblemGraph mst{points.size()};
+    int_fast32_t mstWeight = graph.minimumSpanningTree(mst, mstStartVertex);
+
+    std::ofstream lsMstOutputFile{"results/" + testCaseName + "-local-search-mst.txt"};
+    lsMstOutputFile << "mst-weight: " << mstWeight << std::endl;
+
+    const size_t reps = static_cast<size_t>(ceil(sqrt(points.size())));
+
+    std::mt19937 gen{std::random_device{}()};
+    std::uniform_int_distribution<size_t> dist(1, points.size());
+
+    for(size_t rep = 0; rep < reps; rep++) {
+        const size_t startVertex = dist(gen);
+        std::vector<size_t> salesmanCycle{};
+        graph.generateSalesmanCycleBasedOnMst(mst, salesmanCycle, startVertex);
+        int_fast32_t initialSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
+        size_t improvements = localSearchWithFullNeighbourhood(salesmanCycle, points);
+        int_fast32_t finalSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
+
+        lsMstOutputFile << "improvements: " << improvements << std::endl;
+        lsMstOutputFile << "initial-cycle-weight: " << initialSalesmanCycleWeight << std::endl;
+        lsMstOutputFile << "final-cycle-weight: " << finalSalesmanCycleWeight << std::endl;
+        for(size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++) {
+            lsMstOutputFile << salesmanCycle[vertexPos] << std::endl;
+        }
+        lsMstOutputFile << std::endl;
+    }
+}
+
+
+void testLocalSearchBasedOnRandomInitTsp(const std::vector<Coordinate>& points, const std::string& testCaseName) {
+    std::mt19937 gen{std::random_device{}()};
+
+    //const size_t reps = points.size();
+    const size_t reps{100};
+
+    std::ofstream lsRandomOutputFile{"results/" + testCaseName + "-local-search-rand.txt"};
+
+    for(size_t rep = 0; rep < reps; rep++) {
+        std::vector<size_t> salesmanCycle;
+        for(size_t vertex = 1; vertex <= points.size(); vertex++) {
+            salesmanCycle.push_back(vertex);
+        }
+        std::shuffle(salesmanCycle.begin(), salesmanCycle.end(), gen);
+
+        int_fast32_t initialSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
+        size_t improvements = localSearchWithFullNeighbourhood(salesmanCycle, points);
+        int_fast32_t finalSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
+
+        lsRandomOutputFile << "improvements: " << improvements << std::endl;
+        lsRandomOutputFile << "initial-cycle-weight: " << initialSalesmanCycleWeight << std::endl;
+        lsRandomOutputFile << "final-cycle-weight: " << finalSalesmanCycleWeight << std::endl;
+        for(size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++) {
+            lsRandomOutputFile << salesmanCycle[vertexPos] << std::endl;
+        }
+        lsRandomOutputFile << std::endl;
+    }
+}
+
+
+void testLocalSearchBasedOnRandomInitWithRandomNeighbourhoodTsp(const std::vector<Coordinate>& points, const std::string& testCaseName) {
+    std::mt19937 gen{std::random_device{}()};
+
+    const size_t reps = points.size();
+    //const size_t reps{100};
+
+    std::ofstream lsRandomOutputFile{"results/" + testCaseName + "-local-search-rand-rand-neighbourhood.txt"};
+
+    for(size_t rep = 0; rep < reps; rep++) {
+        std::vector<size_t> salesmanCycle;
+        for(size_t vertex = 1; vertex <= points.size(); vertex++) {
+            salesmanCycle.push_back(vertex);
+        }
+        std::shuffle(salesmanCycle.begin(), salesmanCycle.end(), gen);
+
+        int_fast32_t initialSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
+        size_t improvements = localSearchWithRandomPartNeighbourhood(salesmanCycle, points);
+        int_fast32_t finalSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
+
+        lsRandomOutputFile << "improvements: " << improvements << std::endl;
+        lsRandomOutputFile << "initial-cycle-weight: " << initialSalesmanCycleWeight << std::endl;
+        lsRandomOutputFile << "final-cycle-weight: " << finalSalesmanCycleWeight << std::endl;
+        for(size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++) {
+            lsRandomOutputFile << salesmanCycle[vertexPos] << std::endl;
+        }
+        lsRandomOutputFile << std::endl;
+    }
 }
 
 
@@ -141,6 +200,15 @@ int main(int /*arg*/, char** /*argv*/) {
         }
         if(GENERATE_MST_BASE_CYCLE_TEST) {
             testMstTsp(points, testCaseName);
+        }
+        if(GENERATE_LOCAL_SEARCH_BEGIN_MST_TEST) {
+            testLocalSearchBasedOnMstInitTsp(points, testCaseName);
+        }
+        if(GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_TEST) {
+            testLocalSearchBasedOnRandomInitTsp(points, testCaseName);
+        }
+        if(GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_NEIGHBOURHOOD_RANDOM_TEST) {
+            testLocalSearchBasedOnRandomInitWithRandomNeighbourhoodTsp(points, testCaseName);
         }
     }
 

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.28)  29 OCT 2023 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.28)  15 NOV 2023 17:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/karoljanic/Documents/projects-studies/metaheuristic-algorithms/reports/lab0/lab0.tex
-(/home/karoljanic/Documents/projects-studies/metaheuristic-algorithms/reports/lab0/lab0.tex
+**/home/karoljanic/Documents/studies/metaheuristic-algorithms/reports/lab0/lab0.tex
+(/home/karoljanic/Documents/studies/metaheuristic-algorithms/reports/lab0/lab0.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -524,14 +524,14 @@ Package rerunfilecheck Info: File `lab0.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  16082 strings out of 477950
- 287479 string characters out of 5839253
+ 287452 string characters out of 5839253
  1867388 words of memory out of 5000000
  35994 multiletter control sequences out of 15000+600000
  521061 words of font info for 50 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 63i,11n,67p,600b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,11n,67p,591b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on lab0.pdf (13 pages, 1566798 bytes).
+Output written on lab0.pdf (13 pages, 1568024 bytes).
 PDF statistics:
  524 PDF objects out of 1000 (max. 8388607)
  213 compressed objects within 3 object streams

@@ -100,7 +100,8 @@ def draw_random_cycle_stats(cycle_weights, plot_title, output_file_name):
 
 TESTCASES = [
     "xqf131", "xqg237", "pma343", "pka379", "bcl380",
-    "pbl395", "pbk411", "pbn423", "pbm436", "xql662"
+    "pbl395", "pbk411", "pbn423", "pbm436", "xql662",
+    "xit1083", "icw1483", "djc1785", "dcb2086", "pds2566"
 ]
 
 
@@ -110,10 +111,10 @@ for testcase in TESTCASES:
     tsp_cycle_weight, tsp_cycle_edges = read_tsp_cycle(testcase)
     random_cycle_weights = read_random_cycle_weights(testcase)
 
-    # draw_path(points, mst_edges,
-    #     "MST for {}; total weight = {}".format(testcase, mst_weigth), "plots/{}-mst.png".format(testcase))
+    draw_path(points, mst_edges,
+        "MST for {}; total weight = {}".format(testcase, mst_weigth), "plots/{}-mst.png".format(testcase))
 
-    # draw_path(points, tsp_cycle_edges,
-    #     "TSP cycle based on MST for {}; total weight = {}".format(testcase, tsp_cycle_weight), "plots/{}-tsp-mst.png".format(testcase))
+    draw_path(points, tsp_cycle_edges,
+        "TSP cycle based on MST for {}; total weight = {}".format(testcase, tsp_cycle_weight), "plots/{}-tsp-mst.png".format(testcase))
 
     draw_random_cycle_stats(random_cycle_weights, "Random cycles weight for {}".format(testcase), "plots/{}-rand.png".format(testcase))
