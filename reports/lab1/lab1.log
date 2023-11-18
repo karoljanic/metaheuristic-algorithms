@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.28)  17 NOV 2023 21:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.28)  18 NOV 2023 13:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -527,23 +527,653 @@ l.32 \newpage
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 159.
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [3] [4] (./lab1.aux)
+) [3] [4]
+<../../plots/xqf131-ls-imp.png, id=188, 698.8509pt x 327.3831pt>
+File: ../../plots/xqf131-ls-imp.png Graphic file (type png)
+<use ../../plots/xqf131-ls-imp.png>
+Package pdftex.def Info: ../../plots/xqf131-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/xqf131-tsp-mst.png, id=190, 372.1905pt x 295.5843pt>
+File: ../../plots/xqf131-tsp-mst.png Graphic file (type png)
+<use ../../plots/xqf131-tsp-mst.png>
+Package pdftex.def Info: ../../plots/xqf131-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/xqf131-tsp-ls-mst.png, id=191, 372.1905pt x 308.5929pt>
+File: ../../plots/xqf131-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/xqf131-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/xqf131-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/xqf131-tsp-ls-mst-stats.png, id=192, 604.8999pt x 339.669pt>
+File: ../../plots/xqf131-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/xqf131-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/xqf131-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 253.35474pt x 142.26378pt.
+ [5 <../../plots/xqf131-ls-imp.png> <../../plots/xqf131-tsp-mst.png> <../../plots/xqf131-tsp-ls-mst.png> <../../plots/xqf131-tsp-ls-mst-stats.png>]
+<../../plots/xqf131-tsp-ls-rand.png, id=205, 380.1402pt x 308.5929pt>
+File: ../../plots/xqf131-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/xqf131-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/xqf131-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 175.25523pt x 142.26378pt.
+<../../plots/xqf131-tsp-ls-rand-stats.png, id=206, 611.4042pt x 339.669pt>
+File: ../../plots/xqf131-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/xqf131-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/xqf131-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+<../../plots/xqf131-tsp-ls-rand-rand.png, id=207, 551.4201pt x 308.5929pt>
+File: ../../plots/xqf131-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/xqf131-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/xqf131-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 254.22006pt x 142.26378pt.
+<../../plots/xqf131-tsp-ls-rand-rand-stats.png, id=208, 611.4042pt x 339.669pt>
+File: ../../plots/xqf131-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/xqf131-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/xqf131-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [6 <../../plots/xqf131-tsp-ls-rand.png> <../../plots/xqf131-tsp-ls-rand-stats.png> <../../plots/xqf131-tsp-ls-rand-rand.png> <../../plots/xqf131-tsp-ls-rand-rand-stats.png>]
+<../../plots/xqg237-ls-imp.png, id=222, 698.8509pt x 327.3831pt>
+File: ../../plots/xqg237-ls-imp.png Graphic file (type png)
+<use ../../plots/xqg237-ls-imp.png>
+Package pdftex.def Info: ../../plots/xqg237-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/xqg237-tsp-mst.png, id=223, 372.1905pt x 295.5843pt>
+File: ../../plots/xqg237-tsp-mst.png Graphic file (type png)
+<use ../../plots/xqg237-tsp-mst.png>
+Package pdftex.def Info: ../../plots/xqg237-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/xqg237-tsp-ls-mst.png, id=224, 372.1905pt x 308.5929pt>
+File: ../../plots/xqg237-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/xqg237-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/xqg237-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/xqg237-tsp-ls-mst-stats.png, id=225, 611.4042pt x 339.669pt>
+File: ../../plots/xqg237-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/xqg237-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/xqg237-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [7 <../../plots/xqg237-ls-imp.png> <../../plots/xqg237-tsp-mst.png> <../../plots/xqg237-tsp-ls-mst.png> <../../plots/xqg237-tsp-ls-mst-stats.png>]
+<../../plots/xqg237-tsp-ls-rand.png, id=238, 388.0899pt x 308.5929pt>
+File: ../../plots/xqg237-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/xqg237-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/xqg237-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/xqg237-tsp-ls-rand-stats.png, id=239, 617.9085pt x 339.669pt>
+File: ../../plots/xqg237-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/xqg237-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/xqg237-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+<../../plots/xqg237-tsp-ls-rand-rand.png, id=240, 559.3698pt x 308.5929pt>
+File: ../../plots/xqg237-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/xqg237-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/xqg237-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/xqg237-tsp-ls-rand-rand-stats.png, id=241, 617.9085pt x 339.669pt>
+File: ../../plots/xqg237-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/xqg237-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/xqg237-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [8 <../../plots/xqg237-tsp-ls-rand.png> <../../plots/xqg237-tsp-ls-rand-stats.png> <../../plots/xqg237-tsp-ls-rand-rand.png> <../../plots/xqg237-tsp-ls-rand-rand-stats.png>]
+<../../plots/pma343-ls-imp.png, id=254, 698.8509pt x 327.3831pt>
+File: ../../plots/pma343-ls-imp.png Graphic file (type png)
+<use ../../plots/pma343-ls-imp.png>
+Package pdftex.def Info: ../../plots/pma343-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/pma343-tsp-mst.png, id=255, 372.1905pt x 295.5843pt>
+File: ../../plots/pma343-tsp-mst.png Graphic file (type png)
+<use ../../plots/pma343-tsp-mst.png>
+Package pdftex.def Info: ../../plots/pma343-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/pma343-tsp-ls-mst.png, id=256, 372.1905pt x 308.5929pt>
+File: ../../plots/pma343-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/pma343-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/pma343-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/pma343-tsp-ls-mst-stats.png, id=257, 611.4042pt x 339.669pt>
+File: ../../plots/pma343-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/pma343-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/pma343-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [9 <../../plots/pma343-ls-imp.png> <../../plots/pma343-tsp-mst.png> <../../plots/pma343-tsp-ls-mst.png> <../../plots/pma343-tsp-ls-mst-stats.png>]
+<../../plots/pma343-tsp-ls-rand.png, id=270, 388.0899pt x 308.5929pt>
+File: ../../plots/pma343-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/pma343-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/pma343-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/pma343-tsp-ls-rand-stats.png, id=271, 617.9085pt x 339.669pt>
+File: ../../plots/pma343-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/pma343-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/pma343-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+<../../plots/pma343-tsp-ls-rand-rand.png, id=272, 559.3698pt x 308.5929pt>
+File: ../../plots/pma343-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/pma343-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/pma343-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/pma343-tsp-ls-rand-rand-stats.png, id=273, 617.9085pt x 339.669pt>
+File: ../../plots/pma343-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/pma343-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/pma343-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [10 <../../plots/pma343-tsp-ls-rand.png> <../../plots/pma343-tsp-ls-rand-stats.png> <../../plots/pma343-tsp-ls-rand-rand.png> <../../plots/pma343-tsp-ls-rand-rand-stats.png>]
+<../../plots/pka379-ls-imp.png, id=286, 698.8509pt x 327.3831pt>
+File: ../../plots/pka379-ls-imp.png Graphic file (type png)
+<use ../../plots/pka379-ls-imp.png>
+Package pdftex.def Info: ../../plots/pka379-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/pka379-tsp-mst.png, id=287, 372.1905pt x 295.5843pt>
+File: ../../plots/pka379-tsp-mst.png Graphic file (type png)
+<use ../../plots/pka379-tsp-mst.png>
+Package pdftex.def Info: ../../plots/pka379-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/pka379-tsp-ls-mst.png, id=288, 372.1905pt x 308.5929pt>
+File: ../../plots/pka379-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/pka379-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/pka379-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/pka379-tsp-ls-mst-stats.png, id=289, 611.4042pt x 339.669pt>
+File: ../../plots/pka379-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/pka379-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/pka379-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [11 <../../plots/pka379-ls-imp.png> <../../plots/pka379-tsp-mst.png> <../../plots/pka379-tsp-ls-mst.png> <../../plots/pka379-tsp-ls-mst-stats.png>]
+<../../plots/pka379-tsp-ls-rand.png, id=302, 388.0899pt x 308.5929pt>
+File: ../../plots/pka379-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/pka379-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/pka379-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/pka379-tsp-ls-rand-stats.png, id=303, 617.9085pt x 339.669pt>
+File: ../../plots/pka379-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/pka379-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/pka379-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+<../../plots/pka379-tsp-ls-rand-rand.png, id=304, 559.3698pt x 308.5929pt>
+File: ../../plots/pka379-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/pka379-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/pka379-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/pka379-tsp-ls-rand-rand-stats.png, id=305, 617.9085pt x 339.669pt>
+File: ../../plots/pka379-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/pka379-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/pka379-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [12 <../../plots/pka379-tsp-ls-rand.png> <../../plots/pka379-tsp-ls-rand-stats.png> <../../plots/pka379-tsp-ls-rand-rand.png> <../../plots/pka379-tsp-ls-rand-rand-stats.png>]
+<../../plots/bcl380-ls-imp.png, id=319, 698.8509pt x 327.3831pt>
+File: ../../plots/bcl380-ls-imp.png Graphic file (type png)
+<use ../../plots/bcl380-ls-imp.png>
+Package pdftex.def Info: ../../plots/bcl380-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/bcl380-tsp-mst.png, id=320, 372.1905pt x 295.5843pt>
+File: ../../plots/bcl380-tsp-mst.png Graphic file (type png)
+<use ../../plots/bcl380-tsp-mst.png>
+Package pdftex.def Info: ../../plots/bcl380-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/bcl380-tsp-ls-mst.png, id=321, 372.1905pt x 308.5929pt>
+File: ../../plots/bcl380-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/bcl380-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/bcl380-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/bcl380-tsp-ls-mst-stats.png, id=322, 611.4042pt x 339.669pt>
+File: ../../plots/bcl380-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/bcl380-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/bcl380-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [13 <../../plots/bcl380-ls-imp.png> <../../plots/bcl380-tsp-mst.png> <../../plots/bcl380-tsp-ls-mst.png> <../../plots/bcl380-tsp-ls-mst-stats.png>]
+<../../plots/bcl380-tsp-ls-rand.png, id=335, 388.0899pt x 308.5929pt>
+File: ../../plots/bcl380-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/bcl380-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/bcl380-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/bcl380-tsp-ls-rand-stats.png, id=336, 617.9085pt x 339.669pt>
+File: ../../plots/bcl380-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/bcl380-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/bcl380-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+<../../plots/bcl380-tsp-ls-rand-rand.png, id=337, 559.3698pt x 308.5929pt>
+File: ../../plots/bcl380-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/bcl380-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/bcl380-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/bcl380-tsp-ls-rand-rand-stats.png, id=338, 617.9085pt x 339.669pt>
+File: ../../plots/bcl380-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/bcl380-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/bcl380-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [14 <../../plots/bcl380-tsp-ls-rand.png> <../../plots/bcl380-tsp-ls-rand-stats.png> <../../plots/bcl380-tsp-ls-rand-rand.png> <../../plots/bcl380-tsp-ls-rand-rand-stats.png>]
+<../../plots/pbl395-ls-imp.png, id=351, 698.8509pt x 327.3831pt>
+File: ../../plots/pbl395-ls-imp.png Graphic file (type png)
+<use ../../plots/pbl395-ls-imp.png>
+Package pdftex.def Info: ../../plots/pbl395-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/pbl395-tsp-mst.png, id=352, 372.1905pt x 295.5843pt>
+File: ../../plots/pbl395-tsp-mst.png Graphic file (type png)
+<use ../../plots/pbl395-tsp-mst.png>
+Package pdftex.def Info: ../../plots/pbl395-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/pbl395-tsp-ls-mst.png, id=353, 372.1905pt x 308.5929pt>
+File: ../../plots/pbl395-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/pbl395-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/pbl395-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/pbl395-tsp-ls-mst-stats.png, id=354, 611.4042pt x 339.669pt>
+File: ../../plots/pbl395-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/pbl395-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/pbl395-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [15 <../../plots/pbl395-ls-imp.png> <../../plots/pbl395-tsp-mst.png> <../../plots/pbl395-tsp-ls-mst.png> <../../plots/pbl395-tsp-ls-mst-stats.png>]
+<../../plots/pbl395-tsp-ls-rand.png, id=368, 388.0899pt x 308.5929pt>
+File: ../../plots/pbl395-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/pbl395-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/pbl395-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/pbl395-tsp-ls-rand-stats.png, id=369, 617.9085pt x 339.669pt>
+File: ../../plots/pbl395-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/pbl395-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/pbl395-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+<../../plots/pbl395-tsp-ls-rand-rand.png, id=370, 559.3698pt x 308.5929pt>
+File: ../../plots/pbl395-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/pbl395-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/pbl395-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/pbl395-tsp-ls-rand-rand-stats.png, id=371, 617.9085pt x 339.669pt>
+File: ../../plots/pbl395-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/pbl395-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/pbl395-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [16 <../../plots/pbl395-tsp-ls-rand.png> <../../plots/pbl395-tsp-ls-rand-stats.png> <../../plots/pbl395-tsp-ls-rand-rand.png> <../../plots/pbl395-tsp-ls-rand-rand-stats.png>]
+<../../plots/pbk411-ls-imp.png, id=384, 698.8509pt x 327.3831pt>
+File: ../../plots/pbk411-ls-imp.png Graphic file (type png)
+<use ../../plots/pbk411-ls-imp.png>
+Package pdftex.def Info: ../../plots/pbk411-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/pbk411-tsp-mst.png, id=385, 372.1905pt x 295.5843pt>
+File: ../../plots/pbk411-tsp-mst.png Graphic file (type png)
+<use ../../plots/pbk411-tsp-mst.png>
+Package pdftex.def Info: ../../plots/pbk411-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/pbk411-tsp-ls-mst.png, id=386, 372.1905pt x 308.5929pt>
+File: ../../plots/pbk411-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/pbk411-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/pbk411-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/pbk411-tsp-ls-mst-stats.png, id=387, 611.4042pt x 339.669pt>
+File: ../../plots/pbk411-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/pbk411-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/pbk411-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [17 <../../plots/pbk411-ls-imp.png> <../../plots/pbk411-tsp-mst.png> <../../plots/pbk411-tsp-ls-mst.png> <../../plots/pbk411-tsp-ls-mst-stats.png>]
+<../../plots/pbk411-tsp-ls-rand.png, id=400, 388.0899pt x 308.5929pt>
+File: ../../plots/pbk411-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/pbk411-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/pbk411-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/pbk411-tsp-ls-rand-stats.png, id=401, 617.9085pt x 339.669pt>
+File: ../../plots/pbk411-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/pbk411-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/pbk411-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+<../../plots/pbk411-tsp-ls-rand-rand.png, id=402, 559.3698pt x 308.5929pt>
+File: ../../plots/pbk411-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/pbk411-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/pbk411-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/pbk411-tsp-ls-rand-rand-stats.png, id=403, 617.9085pt x 339.669pt>
+File: ../../plots/pbk411-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/pbk411-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/pbk411-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [18 <../../plots/pbk411-tsp-ls-rand.png> <../../plots/pbk411-tsp-ls-rand-stats.png> <../../plots/pbk411-tsp-ls-rand-rand.png> <../../plots/pbk411-tsp-ls-rand-rand-stats.png>]
+<../../plots/pbn423-ls-imp.png, id=417, 698.8509pt x 327.3831pt>
+File: ../../plots/pbn423-ls-imp.png Graphic file (type png)
+<use ../../plots/pbn423-ls-imp.png>
+Package pdftex.def Info: ../../plots/pbn423-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/pbn423-tsp-mst.png, id=418, 372.1905pt x 295.5843pt>
+File: ../../plots/pbn423-tsp-mst.png Graphic file (type png)
+<use ../../plots/pbn423-tsp-mst.png>
+Package pdftex.def Info: ../../plots/pbn423-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/pbn423-tsp-ls-mst.png, id=419, 372.1905pt x 308.5929pt>
+File: ../../plots/pbn423-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/pbn423-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/pbn423-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/pbn423-tsp-ls-mst-stats.png, id=420, 611.4042pt x 339.669pt>
+File: ../../plots/pbn423-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/pbn423-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/pbn423-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [19 <../../plots/pbn423-ls-imp.png> <../../plots/pbn423-tsp-mst.png> <../../plots/pbn423-tsp-ls-mst.png> <../../plots/pbn423-tsp-ls-mst-stats.png>]
+<../../plots/pbn423-tsp-ls-rand.png, id=433, 388.0899pt x 308.5929pt>
+File: ../../plots/pbn423-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/pbn423-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/pbn423-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/pbn423-tsp-ls-rand-stats.png, id=434, 617.9085pt x 339.669pt>
+File: ../../plots/pbn423-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/pbn423-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/pbn423-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+<../../plots/pbn423-tsp-ls-rand-rand.png, id=435, 559.3698pt x 308.5929pt>
+File: ../../plots/pbn423-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/pbn423-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/pbn423-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/pbn423-tsp-ls-rand-rand-stats.png, id=436, 617.9085pt x 339.669pt>
+File: ../../plots/pbn423-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/pbn423-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/pbn423-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [20 <../../plots/pbn423-tsp-ls-rand.png> <../../plots/pbn423-tsp-ls-rand-stats.png> <../../plots/pbn423-tsp-ls-rand-rand.png> <../../plots/pbn423-tsp-ls-rand-rand-stats.png>]
+<../../plots/pbm436-ls-imp.png, id=449, 698.8509pt x 327.3831pt>
+File: ../../plots/pbm436-ls-imp.png Graphic file (type png)
+<use ../../plots/pbm436-ls-imp.png>
+Package pdftex.def Info: ../../plots/pbm436-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/pbm436-tsp-mst.png, id=450, 372.1905pt x 295.5843pt>
+File: ../../plots/pbm436-tsp-mst.png Graphic file (type png)
+<use ../../plots/pbm436-tsp-mst.png>
+Package pdftex.def Info: ../../plots/pbm436-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/pbm436-tsp-ls-mst.png, id=451, 372.1905pt x 308.5929pt>
+File: ../../plots/pbm436-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/pbm436-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/pbm436-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/pbm436-tsp-ls-mst-stats.png, id=452, 611.4042pt x 339.669pt>
+File: ../../plots/pbm436-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/pbm436-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/pbm436-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [21 <../../plots/pbm436-ls-imp.png> <../../plots/pbm436-tsp-mst.png> <../../plots/pbm436-tsp-ls-mst.png> <../../plots/pbm436-tsp-ls-mst-stats.png>]
+<../../plots/pbm436-tsp-ls-rand.png, id=465, 388.0899pt x 308.5929pt>
+File: ../../plots/pbm436-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/pbm436-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/pbm436-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/pbm436-tsp-ls-rand-stats.png, id=466, 617.9085pt x 339.669pt>
+File: ../../plots/pbm436-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/pbm436-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/pbm436-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+<../../plots/pbm436-tsp-ls-rand-rand.png, id=467, 559.3698pt x 308.5929pt>
+File: ../../plots/pbm436-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/pbm436-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/pbm436-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/pbm436-tsp-ls-rand-rand-stats.png, id=468, 617.9085pt x 339.669pt>
+File: ../../plots/pbm436-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/pbm436-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/pbm436-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [22 <../../plots/pbm436-tsp-ls-rand.png> <../../plots/pbm436-tsp-ls-rand-stats.png> <../../plots/pbm436-tsp-ls-rand-rand.png> <../../plots/pbm436-tsp-ls-rand-rand-stats.png>]
+<../../plots/xql662-ls-imp.png, id=481, 698.8509pt x 327.3831pt>
+File: ../../plots/xql662-ls-imp.png Graphic file (type png)
+<use ../../plots/xql662-ls-imp.png>
+Package pdftex.def Info: ../../plots/xql662-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 303.68845pt x 142.26378pt.
+<../../plots/xql662-tsp-mst.png, id=482, 372.1905pt x 295.5843pt>
+File: ../../plots/xql662-tsp-mst.png Graphic file (type png)
+<use ../../plots/xql662-tsp-mst.png>
+Package pdftex.def Info: ../../plots/xql662-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/xql662-tsp-ls-mst.png, id=483, 372.1905pt x 308.5929pt>
+File: ../../plots/xql662-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/xql662-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/xql662-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/xql662-tsp-ls-mst-stats.png, id=484, 611.4042pt x 339.669pt>
+File: ../../plots/xql662-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/xql662-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/xql662-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [23 <../../plots/xql662-ls-imp.png> <../../plots/xql662-tsp-mst.png> <../../plots/xql662-tsp-ls-mst.png> <../../plots/xql662-tsp-ls-mst-stats.png>]
+<../../plots/xql662-tsp-ls-rand.png, id=497, 388.0899pt x 308.5929pt>
+File: ../../plots/xql662-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/xql662-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/xql662-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/xql662-tsp-ls-rand-stats.png, id=498, 617.9085pt x 339.669pt>
+File: ../../plots/xql662-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/xql662-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/xql662-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+<../../plots/xql662-tsp-ls-rand-rand.png, id=499, 559.3698pt x 308.5929pt>
+File: ../../plots/xql662-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/xql662-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/xql662-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/xql662-tsp-ls-rand-rand-stats.png, id=500, 617.9085pt x 339.669pt>
+File: ../../plots/xql662-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/xql662-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/xql662-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [24 <../../plots/xql662-tsp-ls-rand.png> <../../plots/xql662-tsp-ls-rand-stats.png> <../../plots/xql662-tsp-ls-rand-rand.png> <../../plots/xql662-tsp-ls-rand-rand-stats.png>]
+<../../plots/xit1083-ls-imp.png, id=514, 711.8595pt x 327.3831pt>
+File: ../../plots/xit1083-ls-imp.png Graphic file (type png)
+<use ../../plots/xit1083-ls-imp.png>
+Package pdftex.def Info: ../../plots/xit1083-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 309.34138pt x 142.26378pt.
+<../../plots/xit1083-tsp-mst.png, id=515, 372.1905pt x 295.5843pt>
+File: ../../plots/xit1083-tsp-mst.png Graphic file (type png)
+<use ../../plots/xit1083-tsp-mst.png>
+Package pdftex.def Info: ../../plots/xit1083-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/xit1083-tsp-ls-mst.png, id=516, 372.1905pt x 308.5929pt>
+File: ../../plots/xit1083-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/xit1083-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/xit1083-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/xit1083-tsp-ls-mst-stats.png, id=517, 611.4042pt x 339.669pt>
+File: ../../plots/xit1083-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/xit1083-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/xit1083-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [25 <../../plots/xit1083-ls-imp.png> <../../plots/xit1083-tsp-mst.png> <../../plots/xit1083-tsp-ls-mst.png> <../../plots/xit1083-tsp-ls-mst-stats.png>]
+<../../plots/xit1083-tsp-ls-rand.png, id=530, 388.0899pt x 308.5929pt>
+File: ../../plots/xit1083-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/xit1083-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/xit1083-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/xit1083-tsp-ls-rand-stats.png, id=531, 624.4128pt x 339.669pt>
+File: ../../plots/xit1083-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/xit1083-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/xit1083-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+<../../plots/xit1083-tsp-ls-rand-rand.png, id=532, 559.3698pt x 308.5929pt>
+File: ../../plots/xit1083-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/xit1083-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/xit1083-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/xit1083-tsp-ls-rand-rand-stats.png, id=533, 624.4128pt x 339.669pt>
+File: ../../plots/xit1083-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/xit1083-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/xit1083-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+ [26 <../../plots/xit1083-tsp-ls-rand.png> <../../plots/xit1083-tsp-ls-rand-stats.png> <../../plots/xit1083-tsp-ls-rand-rand.png> <../../plots/xit1083-tsp-ls-rand-rand-stats.png>]
+<../../plots/icw1483-ls-imp.png, id=546, 711.8595pt x 327.3831pt>
+File: ../../plots/icw1483-ls-imp.png Graphic file (type png)
+<use ../../plots/icw1483-ls-imp.png>
+Package pdftex.def Info: ../../plots/icw1483-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 309.34138pt x 142.26378pt.
+<../../plots/icw1483-tsp-mst.png, id=547, 372.1905pt x 295.5843pt>
+File: ../../plots/icw1483-tsp-mst.png Graphic file (type png)
+<use ../../plots/icw1483-tsp-mst.png>
+Package pdftex.def Info: ../../plots/icw1483-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/icw1483-tsp-ls-mst.png, id=548, 372.1905pt x 308.5929pt>
+File: ../../plots/icw1483-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/icw1483-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/icw1483-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/icw1483-tsp-ls-mst-stats.png, id=549, 611.4042pt x 339.669pt>
+File: ../../plots/icw1483-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/icw1483-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/icw1483-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [27 <../../plots/icw1483-ls-imp.png> <../../plots/icw1483-tsp-mst.png> <../../plots/icw1483-tsp-ls-mst.png> <../../plots/icw1483-tsp-ls-mst-stats.png>]
+<../../plots/icw1483-tsp-ls-rand.png, id=562, 388.0899pt x 308.5929pt>
+File: ../../plots/icw1483-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/icw1483-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/icw1483-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/icw1483-tsp-ls-rand-stats.png, id=563, 624.4128pt x 339.669pt>
+File: ../../plots/icw1483-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/icw1483-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/icw1483-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+<../../plots/icw1483-tsp-ls-rand-rand.png, id=564, 559.3698pt x 308.5929pt>
+File: ../../plots/icw1483-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/icw1483-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/icw1483-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 257.88509pt x 142.26378pt.
+<../../plots/icw1483-tsp-ls-rand-rand-stats.png, id=565, 624.4128pt x 339.669pt>
+File: ../../plots/icw1483-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/icw1483-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/icw1483-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+ [28 <../../plots/icw1483-tsp-ls-rand.png> <../../plots/icw1483-tsp-ls-rand-stats.png> <../../plots/icw1483-tsp-ls-rand-rand.png> <../../plots/icw1483-tsp-ls-rand-rand-stats.png>]
+<../../plots/djc1785-ls-imp.png, id=578, 711.8595pt x 327.3831pt>
+File: ../../plots/djc1785-ls-imp.png Graphic file (type png)
+<use ../../plots/djc1785-ls-imp.png>
+Package pdftex.def Info: ../../plots/djc1785-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 309.34138pt x 142.26378pt.
+<../../plots/djc1785-tsp-mst.png, id=579, 372.1905pt x 295.5843pt>
+File: ../../plots/djc1785-tsp-mst.png Graphic file (type png)
+<use ../../plots/djc1785-tsp-mst.png>
+Package pdftex.def Info: ../../plots/djc1785-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/djc1785-tsp-ls-mst.png, id=580, 372.1905pt x 308.5929pt>
+File: ../../plots/djc1785-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/djc1785-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/djc1785-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/djc1785-tsp-ls-mst-stats.png, id=581, 611.4042pt x 339.669pt>
+File: ../../plots/djc1785-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/djc1785-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/djc1785-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [29 <../../plots/djc1785-ls-imp.png> <../../plots/djc1785-tsp-mst.png> <../../plots/djc1785-tsp-ls-mst.png> <../../plots/djc1785-tsp-ls-mst-stats.png>]
+<../../plots/djc1785-tsp-ls-rand.png, id=595, 388.0899pt x 308.5929pt>
+File: ../../plots/djc1785-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/djc1785-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/djc1785-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/djc1785-tsp-ls-rand-stats.png, id=596, 624.4128pt x 339.669pt>
+File: ../../plots/djc1785-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/djc1785-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/djc1785-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+<../../plots/djc1785-tsp-ls-rand-rand.png, id=597, 566.5968pt x 308.5929pt>
+File: ../../plots/djc1785-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/djc1785-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/djc1785-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 261.21693pt x 142.26378pt.
+<../../plots/djc1785-tsp-ls-rand-rand-stats.png, id=598, 624.4128pt x 339.669pt>
+File: ../../plots/djc1785-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/djc1785-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/djc1785-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+ [30 <../../plots/djc1785-tsp-ls-rand.png> <../../plots/djc1785-tsp-ls-rand-stats.png> <../../plots/djc1785-tsp-ls-rand-rand.png> <../../plots/djc1785-tsp-ls-rand-rand-stats.png>]
+<../../plots/dcb2086-ls-imp.png, id=612, 711.8595pt x 327.3831pt>
+File: ../../plots/dcb2086-ls-imp.png Graphic file (type png)
+<use ../../plots/dcb2086-ls-imp.png>
+Package pdftex.def Info: ../../plots/dcb2086-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 309.34138pt x 142.26378pt.
+<../../plots/dcb2086-tsp-mst.png, id=613, 372.1905pt x 295.5843pt>
+File: ../../plots/dcb2086-tsp-mst.png Graphic file (type png)
+<use ../../plots/dcb2086-tsp-mst.png>
+Package pdftex.def Info: ../../plots/dcb2086-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/dcb2086-tsp-ls-mst.png, id=614, 372.1905pt x 308.5929pt>
+File: ../../plots/dcb2086-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/dcb2086-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/dcb2086-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/dcb2086-tsp-ls-mst-stats.png, id=615, 611.4042pt x 339.669pt>
+File: ../../plots/dcb2086-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/dcb2086-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/dcb2086-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 256.07898pt x 142.26378pt.
+ [31 <../../plots/dcb2086-ls-imp.png> <../../plots/dcb2086-tsp-mst.png> <../../plots/dcb2086-tsp-ls-mst.png> <../../plots/dcb2086-tsp-ls-mst-stats.png>]
+<../../plots/dcb2086-tsp-ls-rand.png, id=628, 388.0899pt x 308.5929pt>
+File: ../../plots/dcb2086-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/dcb2086-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/dcb2086-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/dcb2086-tsp-ls-rand-stats.png, id=629, 624.4128pt x 339.669pt>
+File: ../../plots/dcb2086-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/dcb2086-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/dcb2086-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+<../../plots/dcb2086-tsp-ls-rand-rand.png, id=630, 566.5968pt x 308.5929pt>
+File: ../../plots/dcb2086-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/dcb2086-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/dcb2086-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 261.21693pt x 142.26378pt.
+<../../plots/dcb2086-tsp-ls-rand-rand-stats.png, id=631, 624.4128pt x 339.669pt>
+File: ../../plots/dcb2086-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/dcb2086-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/dcb2086-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+ [32 <../../plots/dcb2086-tsp-ls-rand.png> <../../plots/dcb2086-tsp-ls-rand-stats.png> <../../plots/dcb2086-tsp-ls-rand-rand.png> <../../plots/dcb2086-tsp-ls-rand-rand-stats.png>]
+<../../plots/pds2566-ls-imp.png, id=644, 711.8595pt x 327.3831pt>
+File: ../../plots/pds2566-ls-imp.png Graphic file (type png)
+<use ../../plots/pds2566-ls-imp.png>
+Package pdftex.def Info: ../../plots/pds2566-ls-imp.png  used on input line 309.
+(pdftex.def)             Requested size: 309.34138pt x 142.26378pt.
+<../../plots/pds2566-tsp-mst.png, id=645, 372.1905pt x 295.5843pt>
+File: ../../plots/pds2566-tsp-mst.png Graphic file (type png)
+<use ../../plots/pds2566-tsp-mst.png>
+Package pdftex.def Info: ../../plots/pds2566-tsp-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 179.13214pt x 142.26378pt.
+<../../plots/pds2566-tsp-ls-mst.png, id=646, 372.1905pt x 308.5929pt>
+File: ../../plots/pds2566-tsp-ls-mst.png Graphic file (type png)
+<use ../../plots/pds2566-tsp-ls-mst.png>
+Package pdftex.def Info: ../../plots/pds2566-tsp-ls-mst.png  used on input line 309.
+(pdftex.def)             Requested size: 171.59021pt x 142.26378pt.
+<../../plots/pds2566-tsp-ls-mst-stats.png, id=647, 617.9085pt x 339.669pt>
+File: ../../plots/pds2566-tsp-ls-mst-stats.png Graphic file (type png)
+<use ../../plots/pds2566-tsp-ls-mst-stats.png>
+Package pdftex.def Info: ../../plots/pds2566-tsp-ls-mst-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 258.80322pt x 142.26378pt.
+ [33 <../../plots/pds2566-ls-imp.png> <../../plots/pds2566-tsp-mst.png> <../../plots/pds2566-tsp-ls-mst.png> <../../plots/pds2566-tsp-ls-mst-stats.png>]
+<../../plots/pds2566-tsp-ls-rand.png, id=660, 388.0899pt x 308.5929pt>
+File: ../../plots/pds2566-tsp-ls-rand.png Graphic file (type png)
+<use ../../plots/pds2566-tsp-ls-rand.png>
+Package pdftex.def Info: ../../plots/pds2566-tsp-ls-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 178.92027pt x 142.26378pt.
+<../../plots/pds2566-tsp-ls-rand-stats.png, id=661, 624.4128pt x 339.669pt>
+File: ../../plots/pds2566-tsp-ls-rand-stats.png Graphic file (type png)
+<use ../../plots/pds2566-tsp-ls-rand-stats.png>
+Package pdftex.def Info: ../../plots/pds2566-tsp-ls-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+<../../plots/pds2566-tsp-ls-rand-rand.png, id=662, 566.5968pt x 308.5929pt>
+File: ../../plots/pds2566-tsp-ls-rand-rand.png Graphic file (type png)
+<use ../../plots/pds2566-tsp-ls-rand-rand.png>
+Package pdftex.def Info: ../../plots/pds2566-tsp-ls-rand-rand.png  used on input line 309.
+(pdftex.def)             Requested size: 261.21693pt x 142.26378pt.
+<../../plots/pds2566-tsp-ls-rand-rand-stats.png, id=663, 624.4128pt x 339.669pt>
+File: ../../plots/pds2566-tsp-ls-rand-rand-stats.png Graphic file (type png)
+<use ../../plots/pds2566-tsp-ls-rand-rand-stats.png>
+Package pdftex.def Info: ../../plots/pds2566-tsp-ls-rand-rand-stats.png  used on input line 309.
+(pdftex.def)             Requested size: 261.52747pt x 142.26378pt.
+ [34 <../../plots/pds2566-tsp-ls-rand.png> <../../plots/pds2566-tsp-ls-rand-stats.png> <../../plots/pds2566-tsp-ls-rand-rand.png> <../../plots/pds2566-tsp-ls-rand-rand-stats.png>] (./lab1.aux)
 Package rerunfilecheck Info: File `lab1.out' has not changed.
-(rerunfilecheck)             Checksum: EF16282FD8BE12E55B125B4785F264B1;1805.
+(rerunfilecheck)             Checksum: C5D0EA26A9D1928D3A5E3563ED6826DB;3319.
  ) 
 Here is how much of TeX's memory you used:
- 21768 strings out of 477950
- 416263 string characters out of 5839253
- 1865388 words of memory out of 5000000
- 41604 multiletter control sequences out of 15000+600000
+ 22794 strings out of 477950
+ 451953 string characters out of 5839253
+ 1895388 words of memory out of 5000000
+ 42341 multiletter control sequences out of 15000+600000
  521061 words of font info for 50 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
  84i,11n,89p,591b,1144s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on lab1.pdf (5 pages, 150886 bytes).
+Output written on lab1.pdf (35 pages, 7927948 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1027 PDF objects out of 1200 (max. 8388607)
+ 477 compressed objects within 5 object streams
+ 190 named destinations out of 1000 (max. 500000)
+ 829 words of extra memory for PDF output out of 10000 (max. 10000000)
 

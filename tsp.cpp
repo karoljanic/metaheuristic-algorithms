@@ -131,8 +131,8 @@ void testLocalSearchBasedOnMstInitTsp(const std::vector<Coordinate>& points, con
 void testLocalSearchBasedOnRandomInitTsp(const std::vector<Coordinate>& points, const std::string& testCaseName) {
     std::mt19937 gen{std::random_device{}()};
 
-    //const size_t reps = points.size();
-    const size_t reps{100};
+    const size_t reps = points.size();
+    //const size_t reps{100};
 
     std::ofstream lsRandomOutputFile{"results/" + testCaseName + "-local-search-rand.txt"};
 
