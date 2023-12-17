@@ -15,18 +15,16 @@ constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_MST_TEST = false;
 constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_TEST = false;
 constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_NEIGHBOURHOOD_RANDOM_TEST = false;
 
-constexpr bool TUNE_SIMULATED_ANNEALING = true;
-constexpr bool GENERATE_SIMULATED_ANNEALING_TEST = false;
-constexpr bool SIMULATED_ANNEALING_RANDOM_INITIAL_CYCLE = true;
+constexpr bool TUNE_SIMULATED_ANNEALING = false;
+constexpr bool GENERATE_SIMULATED_ANNEALING_TEST = true;
 
 constexpr bool TUNE_TABU_SEARCH = false;
 constexpr bool GENERATE_TABU_SEARCH_TEST = false;
-constexpr bool TABU_SEARCH_RANDOM_INITIAL_CYCLE = true;
 
 const std::vector<std::string> testCases{
-        "xqf131", "xqg237", "pma343", "pka379", "bcl380",
-        "pbl395", "pbk411", "pbn423", "pbm436", "xql662",
-        "xit1083", "icw1483", "djc1785", "dcb2086", "pds2566"};
+        /*"xqf131", "xqg237", "pma343",*/ "pka379", "bcl380",
+                                          "pbl395", "pbk411", "pbn423", "pbm436", "xql662",
+                                          "xit1083", "icw1483", "djc1785", "dcb2086", "pds2566"};
 
 std::string readTest(const std::string &testCase, std::vector<Coordinate> &points) {
     std::ifstream inputFile{"examples/" + testCase + ".tsp"};
@@ -97,8 +95,8 @@ void testMstTsp(const std::vector<Coordinate> &points, const std::string &testCa
     std::ofstream tspMstOutputFile{"results/" + testCaseName + "-tsp-mst.txt"};
     tspMstOutputFile << "weight: " << salesmanCycleWeight << std::endl
                      << "vertices-order: " << std::endl;
-    for (size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++) {
-        tspMstOutputFile << salesmanCycle[vertexPos] << std::endl;
+    for (size_t vertexPos: salesmanCycle) {
+        tspMstOutputFile << vertexPos << std::endl;
     }
     tspMstOutputFile << std::endl;
 }
@@ -130,8 +128,8 @@ void testLocalSearchBasedOnMstInitTsp(const std::vector<Coordinate> &points, con
         lsMstOutputFile << "improvements: " << improvements << std::endl;
         lsMstOutputFile << "initial-cycle-weight: " << initialSalesmanCycleWeight << std::endl;
         lsMstOutputFile << "final-cycle-weight: " << finalSalesmanCycleWeight << std::endl;
-        for (size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++) {
-            lsMstOutputFile << salesmanCycle[vertexPos] << std::endl;
+        for (size_t vertexPos: salesmanCycle) {
+            lsMstOutputFile << vertexPos << std::endl;
         }
         lsMstOutputFile << std::endl;
     }
@@ -158,8 +156,8 @@ void testLocalSearchBasedOnRandomInitTsp(const std::vector<Coordinate> &points, 
         lsRandomOutputFile << "improvements: " << improvements << std::endl;
         lsRandomOutputFile << "initial-cycle-weight: " << initialSalesmanCycleWeight << std::endl;
         lsRandomOutputFile << "final-cycle-weight: " << finalSalesmanCycleWeight << std::endl;
-        for (size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++) {
-            lsRandomOutputFile << salesmanCycle[vertexPos] << std::endl;
+        for (size_t vertexPos: salesmanCycle) {
+            lsRandomOutputFile << vertexPos << std::endl;
         }
         lsRandomOutputFile << std::endl;
     }
@@ -187,152 +185,116 @@ void testLocalSearchBasedOnRandomInitWithRandomNeighbourhoodTsp(const std::vecto
         lsRandomOutputFile << "improvements: " << improvements << std::endl;
         lsRandomOutputFile << "initial-cycle-weight: " << initialSalesmanCycleWeight << std::endl;
         lsRandomOutputFile << "final-cycle-weight: " << finalSalesmanCycleWeight << std::endl;
-        for (size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++) {
-            lsRandomOutputFile << salesmanCycle[vertexPos] << std::endl;
+        for (size_t vertexPos: salesmanCycle) {
+            lsRandomOutputFile << vertexPos << std::endl;
         }
         lsRandomOutputFile << std::endl;
     }
 }
 
-void tuneSimulatedAnnealing(const std::vector<Coordinate> &points, const std::string &testCaseName,
+void testSimulatedAnnealing(const std::vector<Coordinate> &points, const std::string &testCaseName,
                             InitialSolutionType initialSolution) {
 
+    constexpr double alpha{0.5};
+    constexpr double beta{0.95};
+    constexpr double gamma{0.2};
+    constexpr double delta{0.1};
+    constexpr size_t reps{100};
     const ProblemGraph graph = initializeGraph(points);
-    constexpr size_t reps{10};
+
     std::mt19937 gen{std::random_device{}()};
+
     std::string outputFileName;
     if (initialSolution == InitialSolutionType::RANDOM) {
-        outputFileName = testCaseName + "-sa-tuning.txt";
+        outputFileName = testCaseName + "-sa.txt";
     } else {
-        outputFileName = testCaseName + "-sa-mst-tuning.txt";
+        outputFileName = testCaseName + "-sa-mst.txt";
     }
 
     std::ofstream outputFile{"results/" + outputFileName};
 
-    for (const double temperature: {1.0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0}) {
-        for (const double alpha: {0.7, 0.75, 0.8, 0.85, 0.9, 0.93, 0.97, 0.99}) {
-            for (const double beta: {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}) {
-                for (const double gamma: {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}) {
-                    auto result = simulatedAnnealingOnThreads(points, initialSolution,
-                                                              temperature, alpha, beta, gamma,
-                                                              reps, gen, graph);
-                    outputFile << temperature << " " << alpha << " " << beta << " " << gamma << " " <<
-                               result.minWeight << " " << result.avgWeight << " " << result.timePerRepetition
-                               << std::endl;
-                }
-                std::cout << "Temperature: " << temperature << " Alpha: " << alpha << " Beta: " << beta << std::endl;
-            }
+    SaParallelRunResult result = simulatedAnnealingOnThreads(points, initialSolution,
+                                                             alpha, beta, gamma, delta,
+                                                             reps, gen, graph);
+
+    outputFile << alpha << " " << beta << " " << gamma << " " << delta << " " << result.minWeight << " "
+               << result.avgWeight << " " << result.timePerRepetition << std::endl;
+
+    for (size_t vertexPos: result.cycleWithMinWeight) {
+        outputFile << vertexPos << std::endl;
+    }
+}
+
+void tuneTabuSearch(const std::vector<Coordinate> &points, const std::string &testCaseName,
+                    InitialSolutionType initialSolution) {
+    const size_t reps{100};
+    const ProblemGraph graph = initializeGraph(points);
+
+    std::mt19937 gen{std::random_device{}()};
+
+    std::string outputFileName;
+    if (initialSolution == InitialSolutionType::RANDOM) {
+        outputFileName = testCaseName + "-ts-tuning2.txt";
+    } else {
+        outputFileName = testCaseName + "-ts-mst-tuning2.txt";
+    }
+
+    std::ofstream outputFile{"results/" + outputFileName};
+
+    for (const double alpha: {0.01, 0.03, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}) {
+        for (const double beta: {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}) {
+            auto result = tabuSearchWithFullNeighbourhoodOnThreads(points, initialSolution,
+                                                                   alpha, beta, reps, gen, graph);
+            outputFile << alpha << " " << beta << " " << result.minWeight << " " << result.avgWeight << " "
+                       << result.timePerRepetition << std::endl;
+
+            std::cout << "Alpha: " << alpha << " Beta: " << beta << std::endl;
         }
     }
 }
 
-void testSimulatedAnnealing(const std::vector<Coordinate> &points, const std::string &testCaseName,
-                            bool randomInitialCycle) {
-    // constexpr size_t mstStartVertex{1};
+void testTabuSearch(const std::vector<Coordinate> &points, const std::string &testCaseName,
+                    InitialSolutionType initialSolution, bool fullNeighbourhood) {
 
-    // const ProblemGraph graph = initializeGraph(points);
+    constexpr double alpha{0.6};
+    constexpr double beta{0.3};
+    const size_t reps{100};
+    const ProblemGraph graph = initializeGraph(points);
 
-    // ProblemGraph mst{points.size()};
-    // int_fast32_t mstWeight = graph.minimumSpanningTree(mst, mstStartVertex);
+    std::mt19937 gen{std::random_device{}()};
 
-    // std::ofstream saMstOutputFile{"results/" + testCaseName + "-sa-mst.txt"};
-    // saMstOutputFile << "mst-weight: " << mstWeight << std::endl;
+    std::string outputFileName;
+    if (initialSolution == InitialSolutionType::RANDOM) {
+        if (fullNeighbourhood) {
+            outputFileName = testCaseName + "-ts-full-neighbourhood.txt";
+        } else {
+            outputFileName = testCaseName + "-ts-rand-neighbourhood.txt";
+        }
+    } else {
+        if (fullNeighbourhood) {
+            outputFileName = testCaseName + "-ts-mst-full-neighbourhood.txt";
+        } else {
+            outputFileName = testCaseName + "-ts-mst-rand-neighbourhood.txt";
+        }
+    }
 
-    // const size_t reps = static_cast<size_t>(ceil(sqrt(points.size())));
+    std::ofstream outputFile{"results/" + outputFileName};
 
-    // std::mt19937 gen{std::random_device{}()};
-    // std::uniform_int_distribution<size_t> dist(1, points.size());
+    TSParallelRunResult result;
+    if (fullNeighbourhood) {
+        result = tabuSearchWithFullNeighbourhoodOnThreads(points, initialSolution,
+                                                          alpha, beta, reps, gen, graph);
+    } else {
+        result = tabuSearchWithRandomPartNeighbourhoodOnThreads(points, initialSolution,
+                                                                alpha, beta, reps, gen, graph);
+    }
 
-    // for (size_t rep = 0; rep < reps; rep++)
-    // {
-    //     const size_t startVertex = dist(gen);
-    //     std::vector<size_t> salesmanCycle{};
-    //     graph.generateSalesmanCycleBasedOnMst(mst, salesmanCycle, startVertex);
-    //     int_fast32_t initialSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
-    //     size_t improvements = simulatedAnnealing(salesmanCycle, points);
-    //     int_fast32_t finalSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
+    outputFile << alpha << " " << beta << " " << result.minWeight << " " << result.avgWeight << " "
+               << result.timePerRepetition << std::endl;
 
-    //     saMstOutputFile << "improvements: " << improvements << std::endl;
-    //     saMstOutputFile << "initial-cycle-weight: " << initialSalesmanCycleWeight << std::endl;
-    //     saMstOutputFile << "final-cycle-weight: " << finalSalesmanCycleWeight << std::endl;
-    //     for (size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++)
-    //     {
-    //         saMstOutputFile << salesmanCycle[vertexPos] << std::endl;
-    //     }
-    //     saMstOutputFile << std::endl;
-    // }
-}
-
-void tuneTabuSearch(const std::vector<Coordinate> &points, const std::string &testCaseName, bool randomInitialCycle) {
-    // constexpr size_t mstStartVertex{1};
-
-    // const ProblemGraph graph = initializeGraph(points);
-
-    // ProblemGraph mst{points.size()};
-    // int_fast32_t mstWeight = graph.minimumSpanningTree(mst, mstStartVertex);
-
-    // std::ofstream tsMstOutputFile{"results/" + testCaseName + "-ts-mst.txt"};
-    // tsMstOutputFile << "mst-weight: " << mstWeight << std::endl;
-
-    // const size_t reps = static_cast<size_t>(ceil(sqrt(points.size())));
-
-    // std::mt19937 gen{std::random_device{}()};
-    // std::uniform_int_distribution<size_t> dist(1, points.size());
-
-    // for (size_t rep = 0; rep < reps; rep++)
-    // {
-    //     const size_t startVertex = dist(gen);
-    //     std::vector<size_t> salesmanCycle{};
-    //     graph.generateSalesmanCycleBasedOnMst(mst, salesmanCycle, startVertex);
-    //     int_fast32_t initialSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
-    //     size_t improvements = tabuSearch(salesmanCycle, points);
-    //     int_fast32_t finalSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
-
-    //     tsMstOutputFile << "improvements: " << improvements << std::endl;
-    //     tsMstOutputFile << "initial-cycle-weight: " << initialSalesmanCycleWeight << std::endl;
-    //     tsMstOutputFile << "final-cycle-weight: " << finalSalesmanCycleWeight << std::endl;
-    //     for (size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++)
-    //     {
-    //         tsMstOutputFile << salesmanCycle[vertexPos] << std::endl;
-    //     }
-    //     tsMstOutputFile << std::endl;
-    // }
-}
-
-void testTabuSearch(const std::vector<Coordinate> &points, const std::string &testCaseName, bool randomInitialCycle) {
-    // constexpr size_t mstStartVertex{1};
-
-    // const ProblemGraph graph = initializeGraph(points);
-
-    // ProblemGraph mst{points.size()};
-    // int_fast32_t mstWeight = graph.minimumSpanningTree(mst, mstStartVertex);
-
-    // std::ofstream tsMstOutputFile{"results/" + testCaseName + "-ts-mst.txt"};
-    // tsMstOutputFile << "mst-weight: " << mstWeight << std::endl;
-
-    // const size_t reps = static_cast<size_t>(ceil(sqrt(points.size())));
-
-    // std::mt19937 gen{std::random_device{}()};
-    // std::uniform_int_distribution<size_t> dist(1, points.size());
-
-    // for (size_t rep = 0; rep < reps; rep++)
-    // {
-    //     const size_t startVertex = dist(gen);
-    //     std::vector<size_t> salesmanCycle{};
-    //     graph.generateSalesmanCycleBasedOnMst(mst, salesmanCycle, startVertex);
-    //     int_fast32_t initialSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
-    //     size_t improvements = tabuSearch(salesmanCycle, points);
-    //     int_fast32_t finalSalesmanCycleWeight = cycleWeight(points, salesmanCycle);
-
-    //     tsMstOutputFile << "improvements: " << improvements << std::endl;
-    //     tsMstOutputFile << "initial-cycle-weight: " << initialSalesmanCycleWeight << std::endl;
-    //     tsMstOutputFile << "final-cycle-weight: " << finalSalesmanCycleWeight << std::endl;
-    //     for (size_t vertexPos = 0; vertexPos < salesmanCycle.size(); vertexPos++)
-    //     {
-    //         tsMstOutputFile << salesmanCycle[vertexPos] << std::endl;
-    //     }
-    //     tsMstOutputFile << std::endl;
-    // }
+    for (size_t vertexPos: result.cycleWithMinWeight) {
+        outputFile << vertexPos << std::endl;
+    }
 }
 
 int main(int /*arg*/, char ** /*argv*/) {
@@ -358,20 +320,23 @@ int main(int /*arg*/, char ** /*argv*/) {
             testLocalSearchBasedOnRandomInitWithRandomNeighbourhoodTsp(points, testCaseName);
         }
         if (TUNE_SIMULATED_ANNEALING) {
-            if (points.size() < 1000) {
+            if (points.size() == 343) {
                 tuneSimulatedAnnealing(points, testCaseName, InitialSolutionType::RANDOM);
             }
         }
         if (GENERATE_SIMULATED_ANNEALING_TEST) {
-            testSimulatedAnnealing(points, testCaseName, SIMULATED_ANNEALING_RANDOM_INITIAL_CYCLE);
+            testSimulatedAnnealing(points, testCaseName, InitialSolutionType::RANDOM);
         }
         if (TUNE_TABU_SEARCH) {
             if (points.size() <= 1000) {
-                tuneTabuSearch(points, testCaseName, TABU_SEARCH_RANDOM_INITIAL_CYCLE);
+                tuneTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED);
             }
         }
         if (GENERATE_TABU_SEARCH_TEST) {
-            testTabuSearch(points, testCaseName, TABU_SEARCH_RANDOM_INITIAL_CYCLE);
+            testTabuSearch(points, testCaseName, InitialSolutionType::RANDOM, true);
+            testTabuSearch(points, testCaseName, InitialSolutionType::RANDOM, false);
+            testTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED, true);
+            testTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED, false);
         }
     }
 

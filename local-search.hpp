@@ -3,7 +3,6 @@
 
 #include "utils.hpp"
 
-
 struct LSParallelRunResult {
     double minWeight;
     double avgWeight;

@@ -3,18 +3,19 @@
 
 #include "utils.hpp"
 
-
 struct SaParallelRunResult {
     double minWeight;
     double avgWeight;
     double timePerRepetition;
+    std::vector<size_t> cycleWithMinWeight;
 };
 
 void simulatedAnnealing(std::vector<size_t> &cycle, const std::vector<Coordinate> &points,
-                        double temperature, double alpha, double beta, double gamma) {
+                        double alpha, double beta, double gamma, double delta) {
     const size_t n{cycle.size()};
-    const size_t maxEpochSize{static_cast<size_t>(static_cast<double>(n) * beta)};
-    const size_t maxIterationsWithoutImprovement{static_cast<size_t>(static_cast<double>(n) * gamma)};
+    double temperature{static_cast<double>(cycleWeight(points, cycle)) * alpha};
+    const size_t maxEpochSize{static_cast<size_t>(static_cast<double>(n) * gamma)};
+    const size_t maxIterationsWithoutImprovement{static_cast<size_t>(static_cast<double>(n) * delta)};
 
     std::vector<std::pair<size_t, size_t>> inversions;
     for (size_t i = 0; i < n - 1; i++) {
@@ -74,7 +75,7 @@ void simulatedAnnealing(std::vector<size_t> &cycle, const std::vector<Coordinate
             }
         }
 
-        temperature *= alpha;
+        temperature *= beta;
     }
 
     cycle = bestCycle;
@@ -82,7 +83,7 @@ void simulatedAnnealing(std::vector<size_t> &cycle, const std::vector<Coordinate
 
 SaParallelRunResult
 simulatedAnnealingOnThreads(const std::vector<Coordinate> &points, InitialSolutionType initialSolution,
-                            double temperature, double alpha, double beta, double gamma, size_t repetitions,
+                            double alpha, double beta, double gamma, double delta, size_t repetitions,
                             std::mt19937 &generator, const ProblemGraph &graph) {
     auto start = std::chrono::high_resolution_clock::now();
 
@@ -106,8 +107,8 @@ simulatedAnnealingOnThreads(const std::vector<Coordinate> &points, InitialSoluti
     }
 
     for (size_t rep = 0; rep < repetitions; rep++) {
-        threads.emplace_back(simulatedAnnealing, std::ref(cycles[rep]), std::ref(points), temperature,
-                             alpha, beta, gamma);
+        threads.emplace_back(simulatedAnnealing, std::ref(cycles[rep]), std::ref(points),
+                             alpha, beta, gamma, delta);
     }
 
     for (auto &thread: threads) {
@@ -116,17 +117,30 @@ simulatedAnnealingOnThreads(const std::vector<Coordinate> &points, InitialSoluti
 
     auto end = std::chrono::high_resolution_clock::now();
 
-    std::vector<int_fast32_t> results(repetitions);
+    std::vector<double> results(repetitions);
     for (size_t rep = 0; rep < repetitions; rep++) {
-        results[rep] = cycleWeight(points, cycles[rep]);
+        results[rep] = static_cast<double>(cycleWeight(points, cycles[rep]));
     }
 
     std::chrono::duration<double> elapsed = end - start;
 
-    return {static_cast<double>(*std::min_element(results.begin(), results.end())),
-            std::accumulate(results.begin(), results.end(), 0.0) / static_cast<double>(repetitions),
-            static_cast<double>(elapsed.count()) / static_cast<double>(repetitions)};
+    double minWeight{std::numeric_limits<double>::max()};
+    size_t minWeightIndex{0};
+    double weightsSum{0.0};
+    for (size_t rep = 0; rep < repetitions; rep++) {
+        if (results[rep] < minWeight) {
+            minWeight = results[rep];
+            minWeightIndex = rep;
+        }
+        weightsSum += static_cast<double>(results[rep]);
+    }
 
+    return {
+            minWeight,
+            weightsSum / static_cast<double>(repetitions),
+            elapsed.count() / static_cast<double>(repetitions),
+            cycles[minWeightIndex]
+    };
 }
 
 #endif // SIMULATED_ANNEALING_HPP
