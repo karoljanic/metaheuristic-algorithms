@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.28)  18 DEC 2023 01:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.21)  18 DEC 2023 13:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/karoljanic/Documents/studies/metaheuristic-algorithms/reports/lab2/lab2.tex
-(/home/karoljanic/Documents/studies/metaheuristic-algorithms/reports/lab2/lab2.tex
+**/home/karoljanic/Documents/projects-studies/metaheuristic-algorithms/reports/lab2/lab2.tex
+(/home/karoljanic/Documents/projects-studies/metaheuristic-algorithms/reports/lab2/lab2.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -509,7 +509,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 28.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./lab2.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./lab2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -674,23 +674,23 @@ File: ../../plots/ts-tuning-alpha-beta-time-xqg237.png Graphic file (type png)
 <use ../../plots/ts-tuning-alpha-beta-time-xqg237.png>
 Package pdftex.def Info: ../../plots/ts-tuning-alpha-beta-time-xqg237.png  used on input line 230.
 (pdftex.def)             Requested size: 334.51105pt x 256.0748pt.
- [14 <../../plots/ts-tuning-alpha-beta-time-xqf131.png> <../../plots/ts-tuning-alpha-beta-time-xqg237.png>] [15] [16] (./lab2.aux)
+ [14 <../../plots/ts-tuning-alpha-beta-time-xqf131.png> <../../plots/ts-tuning-alpha-beta-time-xqg237.png>] [15{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [16] (./lab2.aux)
 Package rerunfilecheck Info: File `lab2.out' has not changed.
 (rerunfilecheck)             Checksum: 2DD66E55676FD451D2265FC1F775BC14;9594.
  ) 
 Here is how much of TeX's memory you used:
- 21842 strings out of 477950
- 421422 string characters out of 5839253
+ 21844 strings out of 477950
+ 421480 string characters out of 5839253
  1871388 words of memory out of 5000000
  41602 multiletter control sequences out of 15000+600000
  521061 words of font info for 50 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 84i,10n,89p,766b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on lab2.pdf (17 pages, 736244 bytes).
+ 84i,10n,89p,775b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on lab2.pdf (17 pages, 804402 bytes).
 PDF statistics:
- 624 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
+ 379 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
  73 named destinations out of 1000 (max. 500000)
  349 words of extra memory for PDF output out of 10000 (max. 10000000)
 
