@@ -15,16 +15,13 @@ constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_MST_TEST = false;
 constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_TEST = false;
 constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_NEIGHBOURHOOD_RANDOM_TEST = false;
 
-constexpr bool TUNE_SIMULATED_ANNEALING = false;
 constexpr bool GENERATE_SIMULATED_ANNEALING_TEST = true;
-
-constexpr bool TUNE_TABU_SEARCH = false;
 constexpr bool GENERATE_TABU_SEARCH_TEST = false;
 
 const std::vector<std::string> testCases{
-        /*"xqf131", "xqg237", "pma343",*/ "pka379", "bcl380",
+        "xqf131", "xqg237", /*"pma343", "pka379", "bcl380",
                                           "pbl395", "pbk411", "pbn423", "pbm436", "xql662",
-                                          "xit1083", "icw1483", "djc1785", "dcb2086", "pds2566"};
+                                          "xit1083", "icw1483", "djc1785", "dcb2086", "pds2566"*/};
 
 std::string readTest(const std::string &testCase, std::vector<Coordinate> &points) {
     std::ifstream inputFile{"examples/" + testCase + ".tsp"};
@@ -225,33 +222,6 @@ void testSimulatedAnnealing(const std::vector<Coordinate> &points, const std::st
     }
 }
 
-void tuneTabuSearch(const std::vector<Coordinate> &points, const std::string &testCaseName,
-                    InitialSolutionType initialSolution) {
-    const size_t reps{100};
-    const ProblemGraph graph = initializeGraph(points);
-
-    std::mt19937 gen{std::random_device{}()};
-
-    std::string outputFileName;
-    if (initialSolution == InitialSolutionType::RANDOM) {
-        outputFileName = testCaseName + "-ts-tuning2.txt";
-    } else {
-        outputFileName = testCaseName + "-ts-mst-tuning2.txt";
-    }
-
-    std::ofstream outputFile{"results/" + outputFileName};
-
-    for (const double alpha: {0.01, 0.03, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}) {
-        for (const double beta: {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}) {
-            auto result = tabuSearchWithFullNeighbourhoodOnThreads(points, initialSolution,
-                                                                   alpha, beta, reps, gen, graph);
-            outputFile << alpha << " " << beta << " " << result.minWeight << " " << result.avgWeight << " "
-                       << result.timePerRepetition << std::endl;
-
-            std::cout << "Alpha: " << alpha << " Beta: " << beta << std::endl;
-        }
-    }
-}
 
 void testTabuSearch(const std::vector<Coordinate> &points, const std::string &testCaseName,
                     InitialSolutionType initialSolution, bool fullNeighbourhood) {
@@ -319,24 +289,14 @@ int main(int /*arg*/, char ** /*argv*/) {
         if (GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_NEIGHBOURHOOD_RANDOM_TEST) {
             testLocalSearchBasedOnRandomInitWithRandomNeighbourhoodTsp(points, testCaseName);
         }
-        if (TUNE_SIMULATED_ANNEALING) {
-            if (points.size() == 343) {
-                tuneSimulatedAnnealing(points, testCaseName, InitialSolutionType::RANDOM);
-            }
-        }
         if (GENERATE_SIMULATED_ANNEALING_TEST) {
             testSimulatedAnnealing(points, testCaseName, InitialSolutionType::RANDOM);
         }
-        if (TUNE_TABU_SEARCH) {
-            if (points.size() <= 1000) {
-                tuneTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED);
-            }
-        }
         if (GENERATE_TABU_SEARCH_TEST) {
-            testTabuSearch(points, testCaseName, InitialSolutionType::RANDOM, true);
-            testTabuSearch(points, testCaseName, InitialSolutionType::RANDOM, false);
-            testTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED, true);
-            testTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED, false);
+            //testTabuSearch(points, testCaseName, InitialSolutionType::RANDOM, true);
+            //testTabuSearch(points, testCaseName, InitialSolutionType::RANDOM, false);
+            //testTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED, true);
+            //testTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED, false);
         }
     }
 

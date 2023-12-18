@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.28)  17 DEC 2023 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.10.28)  18 DEC 2023 01:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -542,23 +542,155 @@ Overfull \hbox (13.09848pt too wide) in paragraph at lines 67--68
 \T1/cmr/m/n/10 Opisane wy-»ej me-ta-heu-ry-sty-ki zo-sta-ªy na-stro-jo-ne oraz te-sto-wa-ne na przy-kªa-dach z []$\T1/cmtt/m/n/10 https : / / www . math . uwaterloo .
  []
 
-[2] [3] [4] (./lab2.aux)
+[2]
+<../../plots/sa-tuning-alpha-avg-xqf131.png, id=176, 413.3844pt x 346.896pt>
+File: ../../plots/sa-tuning-alpha-avg-xqf131.png Graphic file (type png)
+<use ../../plots/sa-tuning-alpha-avg-xqf131.png>
+Package pdftex.def Info: ../../plots/sa-tuning-alpha-avg-xqf131.png  used on input line 80.
+(pdftex.def)             Requested size: 322.12314pt x 270.30118pt.
+<../../plots/sa-tuning-alpha-avg-xqg237.png, id=178, 419.8887pt x 346.896pt>
+File: ../../plots/sa-tuning-alpha-avg-xqg237.png Graphic file (type png)
+<use ../../plots/sa-tuning-alpha-avg-xqg237.png>
+Package pdftex.def Info: ../../plots/sa-tuning-alpha-avg-xqg237.png  used on input line 85.
+(pdftex.def)             Requested size: 327.19153pt x 270.30118pt.
+ [3 <../../plots/sa-tuning-alpha-avg-xqf131.png> <../../plots/sa-tuning-alpha-avg-xqg237.png>]
+<../../plots/sa-tuning-alpha-min-xqf131.png, id=187, 412.6617pt x 346.896pt>
+File: ../../plots/sa-tuning-alpha-min-xqf131.png Graphic file (type png)
+<use ../../plots/sa-tuning-alpha-min-xqf131.png>
+Package pdftex.def Info: ../../plots/sa-tuning-alpha-min-xqf131.png  used on input line 93.
+(pdftex.def)             Requested size: 321.55998pt x 270.30118pt.
+<../../plots/sa-tuning-alpha-min-xqg237.png, id=188, 419.166pt x 346.896pt>
+File: ../../plots/sa-tuning-alpha-min-xqg237.png Graphic file (type png)
+<use ../../plots/sa-tuning-alpha-min-xqg237.png>
+Package pdftex.def Info: ../../plots/sa-tuning-alpha-min-xqg237.png  used on input line 98.
+(pdftex.def)             Requested size: 326.62837pt x 270.30118pt.
+ [4 <../../plots/sa-tuning-alpha-min-xqf131.png> <../../plots/sa-tuning-alpha-min-xqg237.png>]
+<../../plots/sa-tuning-alpha-time-xqf131.png, id=197, 416.2752pt x 346.896pt>
+File: ../../plots/sa-tuning-alpha-time-xqf131.png Graphic file (type png)
+<use ../../plots/sa-tuning-alpha-time-xqf131.png>
+Package pdftex.def Info: ../../plots/sa-tuning-alpha-time-xqf131.png  used on input line 106.
+(pdftex.def)             Requested size: 324.37576pt x 270.30118pt.
+<../../plots/sa-tuning-alpha-time-xqg237.png, id=198, 409.7709pt x 346.896pt>
+File: ../../plots/sa-tuning-alpha-time-xqg237.png Graphic file (type png)
+<use ../../plots/sa-tuning-alpha-time-xqg237.png>
+Package pdftex.def Info: ../../plots/sa-tuning-alpha-time-xqg237.png  used on input line 111.
+(pdftex.def)             Requested size: 319.30739pt x 270.30118pt.
+ [5 <../../plots/sa-tuning-alpha-time-xqf131.png> <../../plots/sa-tuning-alpha-time-xqg237.png>]
+<../../plots/sa-tuning-beta-avg-xqf131.png, id=207, 419.166pt x 346.896pt>
+File: ../../plots/sa-tuning-beta-avg-xqf131.png Graphic file (type png)
+<use ../../plots/sa-tuning-beta-avg-xqf131.png>
+Package pdftex.def Info: ../../plots/sa-tuning-beta-avg-xqf131.png  used on input line 120.
+(pdftex.def)             Requested size: 326.62837pt x 270.30118pt.
+<../../plots/sa-tuning-beta-avg-xqg237.png, id=208, 425.6703pt x 346.896pt>
+File: ../../plots/sa-tuning-beta-avg-xqg237.png Graphic file (type png)
+<use ../../plots/sa-tuning-beta-avg-xqg237.png>
+Package pdftex.def Info: ../../plots/sa-tuning-beta-avg-xqg237.png  used on input line 125.
+(pdftex.def)             Requested size: 331.69673pt x 270.30118pt.
+ [6 <../../plots/sa-tuning-beta-avg-xqf131.png> <../../plots/sa-tuning-beta-avg-xqg237.png>]
+<../../plots/sa-tuning-beta-min-xqf131.png, id=218, 419.166pt x 346.896pt>
+File: ../../plots/sa-tuning-beta-min-xqf131.png Graphic file (type png)
+<use ../../plots/sa-tuning-beta-min-xqf131.png>
+Package pdftex.def Info: ../../plots/sa-tuning-beta-min-xqf131.png  used on input line 133.
+(pdftex.def)             Requested size: 326.62837pt x 270.30118pt.
+<../../plots/sa-tuning-beta-min-xqg237.png, id=219, 425.6703pt x 346.896pt>
+File: ../../plots/sa-tuning-beta-min-xqg237.png Graphic file (type png)
+<use ../../plots/sa-tuning-beta-min-xqg237.png>
+Package pdftex.def Info: ../../plots/sa-tuning-beta-min-xqg237.png  used on input line 138.
+(pdftex.def)             Requested size: 331.69673pt x 270.30118pt.
+ [7 <../../plots/sa-tuning-beta-min-xqf131.png> <../../plots/sa-tuning-beta-min-xqg237.png>]
+<../../plots/sa-tuning-beta-time-xqf131.png, id=228, 415.5525pt x 346.896pt>
+File: ../../plots/sa-tuning-beta-time-xqf131.png Graphic file (type png)
+<use ../../plots/sa-tuning-beta-time-xqf131.png>
+Package pdftex.def Info: ../../plots/sa-tuning-beta-time-xqf131.png  used on input line 146.
+(pdftex.def)             Requested size: 323.8126pt x 270.30118pt.
+<../../plots/sa-tuning-beta-time-xqg237.png, id=229, 415.5525pt x 346.896pt>
+File: ../../plots/sa-tuning-beta-time-xqg237.png Graphic file (type png)
+<use ../../plots/sa-tuning-beta-time-xqg237.png>
+Package pdftex.def Info: ../../plots/sa-tuning-beta-time-xqg237.png  used on input line 151.
+(pdftex.def)             Requested size: 323.8126pt x 270.30118pt.
+ [8 <../../plots/sa-tuning-beta-time-xqf131.png> <../../plots/sa-tuning-beta-time-xqg237.png>]
+<../../plots/sa-tuning-gamma-delta-avg-xqf131.png, id=238, 421.3341pt x 346.896pt>
+File: ../../plots/sa-tuning-gamma-delta-avg-xqf131.png Graphic file (type png)
+<use ../../plots/sa-tuning-gamma-delta-avg-xqf131.png>
+Package pdftex.def Info: ../../plots/sa-tuning-gamma-delta-avg-xqf131.png  used on input line 159.
+(pdftex.def)             Requested size: 345.59906pt x 284.52756pt.
+<../../plots/sa-tuning-gamma-delta-avg-xqg237.png, id=239, 421.3341pt x 346.896pt>
+File: ../../plots/sa-tuning-gamma-delta-avg-xqg237.png Graphic file (type png)
+<use ../../plots/sa-tuning-gamma-delta-avg-xqg237.png>
+Package pdftex.def Info: ../../plots/sa-tuning-gamma-delta-avg-xqg237.png  used on input line 164.
+(pdftex.def)             Requested size: 345.59906pt x 284.52756pt.
+ [9 <../../plots/sa-tuning-gamma-delta-avg-xqf131.png> <../../plots/sa-tuning-gamma-delta-avg-xqg237.png>]
+<../../plots/sa-tuning-gamma-delta-min-xqf131.png, id=248, 439.4016pt x 346.896pt>
+File: ../../plots/sa-tuning-gamma-delta-min-xqf131.png Graphic file (type png)
+<use ../../plots/sa-tuning-gamma-delta-min-xqf131.png>
+Package pdftex.def Info: ../../plots/sa-tuning-gamma-delta-min-xqf131.png  used on input line 172.
+(pdftex.def)             Requested size: 360.4189pt x 284.52756pt.
+<../../plots/sa-tuning-gamma-delta-min-xqg237.png, id=249, 439.4016pt x 346.896pt>
+File: ../../plots/sa-tuning-gamma-delta-min-xqg237.png Graphic file (type png)
+<use ../../plots/sa-tuning-gamma-delta-min-xqg237.png>
+Package pdftex.def Info: ../../plots/sa-tuning-gamma-delta-min-xqg237.png  used on input line 177.
+(pdftex.def)             Requested size: 360.4189pt x 284.52756pt.
+ [10 <../../plots/sa-tuning-gamma-delta-min-xqf131.png> <../../plots/sa-tuning-gamma-delta-min-xqg237.png>]
+<../../plots/sa-tuning-gamma-delta-time-xqf131.png, id=258, 469.0323pt x 346.896pt>
+File: ../../plots/sa-tuning-gamma-delta-time-xqf131.png Graphic file (type png)
+<use ../../plots/sa-tuning-gamma-delta-time-xqf131.png>
+Package pdftex.def Info: ../../plots/sa-tuning-gamma-delta-time-xqf131.png  used on input line 184.
+(pdftex.def)             Requested size: 384.72348pt x 284.52756pt.
+<../../plots/sa-tuning-gamma-delta-time-xqg237.png, id=259, 469.0323pt x 346.896pt>
+File: ../../plots/sa-tuning-gamma-delta-time-xqg237.png Graphic file (type png)
+<use ../../plots/sa-tuning-gamma-delta-time-xqg237.png>
+Package pdftex.def Info: ../../plots/sa-tuning-gamma-delta-time-xqg237.png  used on input line 189.
+(pdftex.def)             Requested size: 384.72348pt x 284.52756pt.
+ [11 <../../plots/sa-tuning-gamma-delta-time-xqf131.png> <../../plots/sa-tuning-gamma-delta-time-xqg237.png>]
+<../../plots/ts-tuning-alpha-beta-avg-xqf131.png, id=268, 413.3844pt x 346.896pt>
+File: ../../plots/ts-tuning-alpha-beta-avg-xqf131.png Graphic file (type png)
+<use ../../plots/ts-tuning-alpha-beta-avg-xqf131.png>
+Package pdftex.def Info: ../../plots/ts-tuning-alpha-beta-avg-xqf131.png  used on input line 199.
+(pdftex.def)             Requested size: 305.16795pt x 256.0748pt.
+<../../plots/ts-tuning-alpha-beta-avg-xqg237.png, id=269, 413.3844pt x 346.896pt>
+File: ../../plots/ts-tuning-alpha-beta-avg-xqg237.png Graphic file (type png)
+<use ../../plots/ts-tuning-alpha-beta-avg-xqg237.png>
+Package pdftex.def Info: ../../plots/ts-tuning-alpha-beta-avg-xqg237.png  used on input line 204.
+(pdftex.def)             Requested size: 305.16795pt x 256.0748pt.
+ [12 <../../plots/ts-tuning-alpha-beta-avg-xqf131.png> <../../plots/ts-tuning-alpha-beta-avg-xqg237.png>]
+<../../plots/ts-tuning-alpha-beta-min-xqf131.png, id=279, 423.5022pt x 346.896pt>
+File: ../../plots/ts-tuning-alpha-beta-min-xqf131.png Graphic file (type png)
+<use ../../plots/ts-tuning-alpha-beta-min-xqf131.png>
+Package pdftex.def Info: ../../plots/ts-tuning-alpha-beta-min-xqf131.png  used on input line 212.
+(pdftex.def)             Requested size: 312.6371pt x 256.0748pt.
+<../../plots/ts-tuning-alpha-beta-min-xqg237.png, id=280, 423.5022pt x 346.896pt>
+File: ../../plots/ts-tuning-alpha-beta-min-xqg237.png Graphic file (type png)
+<use ../../plots/ts-tuning-alpha-beta-min-xqg237.png>
+Package pdftex.def Info: ../../plots/ts-tuning-alpha-beta-min-xqg237.png  used on input line 217.
+(pdftex.def)             Requested size: 312.6371pt x 256.0748pt.
+ [13 <../../plots/ts-tuning-alpha-beta-min-xqf131.png> <../../plots/ts-tuning-alpha-beta-min-xqg237.png>]
+<../../plots/ts-tuning-alpha-beta-time-xqf131.png, id=289, 453.1329pt x 346.896pt>
+File: ../../plots/ts-tuning-alpha-beta-time-xqf131.png Graphic file (type png)
+<use ../../plots/ts-tuning-alpha-beta-time-xqf131.png>
+Package pdftex.def Info: ../../plots/ts-tuning-alpha-beta-time-xqf131.png  used on input line 225.
+(pdftex.def)             Requested size: 334.51105pt x 256.0748pt.
+<../../plots/ts-tuning-alpha-beta-time-xqg237.png, id=290, 453.1329pt x 346.896pt>
+File: ../../plots/ts-tuning-alpha-beta-time-xqg237.png Graphic file (type png)
+<use ../../plots/ts-tuning-alpha-beta-time-xqg237.png>
+Package pdftex.def Info: ../../plots/ts-tuning-alpha-beta-time-xqg237.png  used on input line 230.
+(pdftex.def)             Requested size: 334.51105pt x 256.0748pt.
+ [14 <../../plots/ts-tuning-alpha-beta-time-xqf131.png> <../../plots/ts-tuning-alpha-beta-time-xqg237.png>] [15] [16] (./lab2.aux)
 Package rerunfilecheck Info: File `lab2.out' has not changed.
-(rerunfilecheck)             Checksum: BB9A62566DF42F611E0A2D3C3B65F363;1387.
+(rerunfilecheck)             Checksum: 2DD66E55676FD451D2265FC1F775BC14;9594.
  ) 
 Here is how much of TeX's memory you used:
- 21599 strings out of 477950
- 412267 string characters out of 5839253
- 1895388 words of memory out of 5000000
- 41440 multiletter control sequences out of 15000+600000
+ 21842 strings out of 477950
+ 421422 string characters out of 5839253
+ 1871388 words of memory out of 5000000
+ 41602 multiletter control sequences out of 15000+600000
  521061 words of font info for 50 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 84i,10n,89p,591b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,89p,766b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/karoljanic/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on lab2.pdf (5 pages, 110068 bytes).
+Output written on lab2.pdf (17 pages, 736244 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 624 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 349 words of extra memory for PDF output out of 10000 (max. 10000000)
 

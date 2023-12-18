@@ -246,32 +246,32 @@ def analyze_sa_tuning(testcases):
         avg_changes.append(avg_result)
         time_changes.append(time_per_rep)
 
-    plt.clf()
     for i in range(len(testcases)):
+        plt.clf()
         plt.plot(alpha_changes[i], min_changes[i], label=testcases[i])
-    plt.xlabel("alpha")
-    plt.ylabel("minimalna waga rozwiązania")
-    plt.suptitle(r'Wpływ parametru alpha na najlepszy wynik metaheurystyki')
-    plt.title(r'$\beta = 0.99$, $\gamma = 0.3$, $\delta = 0.3$')
-    plt.savefig("plots/sa-tuning-alpha-min.png", bbox_inches="tight")
+        plt.xlabel("alpha")
+        plt.ylabel("minimalna waga rozwiązania")
+        plt.suptitle(r'Wpływ parametru alpha na najlepszy wynik metaheurystyki')
+        plt.title(r'{}, $\beta = 0.99$, $\gamma = 0.3$, $\delta = 0.3$'.format(testcases[i]))
+        plt.savefig("plots/sa-tuning-alpha-min-{}.png".format(testcases[i]), bbox_inches="tight")
 
-    plt.clf()
     for i in range(len(testcases)):
+        plt.clf()
         plt.plot(alpha_changes[i], avg_changes[i], label=testcases[i])
-    plt.xlabel("alpha")
-    plt.ylabel("średnia waga rozwiązania")
-    plt.suptitle(r"Wpływ parametru alpha na średni wynik metaheurystyki")
-    plt.title(r'$\beta = 0.99$, $\gamma = 0.3$, $\delta = 0.3$')
-    plt.savefig("plots/sa-tuning-alpha-avg.png", bbox_inches="tight")
+        plt.xlabel("alpha")
+        plt.ylabel("średnia waga rozwiązania")
+        plt.suptitle(r"Wpływ parametru alpha na średni wynik metaheurystyki")
+        plt.title(r'{}, $\beta = 0.99$, $\gamma = 0.3$, $\delta = 0.3$'.format(testcases[i]))
+        plt.savefig("plots/sa-tuning-alpha-avg-{}.png".format(testcases[i]), bbox_inches="tight")
 
-    plt.clf()
     for i in range(len(testcases)):
+        plt.clf()
         plt.plot(alpha_changes[i], time_changes[i], label=testcases[i])
-    plt.xlabel("alpha")
-    plt.ylabel("średni czas działania")
-    plt.suptitle(r"Wpływ parametru alpha na czas działania metaheurystyki")
-    plt.title(r'$\beta = 0.99$, $\gamma = 0.3$, $\delta = 0.3$')
-    plt.savefig("plots/sa-tuning-alpha-time.png", bbox_inches="tight")
+        plt.xlabel("alpha")
+        plt.ylabel("średni czas działania")
+        plt.suptitle(r"Wpływ parametru alpha na czas działania metaheurystyki")
+        plt.title(r'{}, $\beta = 0.99$, $\gamma = 0.3$, $\delta = 0.3$'.format(testcases[i]))
+        plt.savefig("plots/sa-tuning-alpha-time-{}.png".format(testcases[i]), bbox_inches="tight")
 
 
     beta_changes = []
@@ -285,32 +285,32 @@ def analyze_sa_tuning(testcases):
         avg_changes.append(avg_result)
         time_changes.append(time_per_rep)
 
-    plt.clf()
     for i in range(len(testcases)):
+        plt.clf()
         plt.plot(beta_changes[i], min_changes[i], label=testcases[i])
-    plt.xlabel("beta")
-    plt.ylabel("minimalna waga rozwiązania")
-    plt.suptitle(r"Wpływ parametru beta na najlepszy wynik metaheurystyki")
-    plt.title(r"$\alpha = 0.5$, $\gamma = 0.3$, $\delta = 0.3$")
-    plt.savefig("plots/sa-tuning-beta-min.png", bbox_inches="tight")
+        plt.xlabel("beta")
+        plt.ylabel("minimalna waga rozwiązania")
+        plt.suptitle(r"Wpływ parametru beta na najlepszy wynik metaheurystyki")
+        plt.title(r"{}, $\alpha = 0.5$, $\gamma = 0.3$, $\delta = 0.3$".format(testcases[i]))
+        plt.savefig("plots/sa-tuning-beta-min-{}.png".format(testcases[i]), bbox_inches="tight")
 
-    plt.clf()
     for i in range(len(testcases)):
+        plt.clf()
         plt.plot(beta_changes[i], avg_changes[i], label=testcases[i])
-    plt.xlabel("beta")
-    plt.ylabel("średnia waga rozwiązania")
-    plt.suptitle(r"Wpływ parametru beta na średni wynik metaheurystyki")
-    plt.title(r"$\alpha = 0.5$, $\gamma = 0.3$, $\delta = 0.3$")
-    plt.savefig("plots/sa-tuning-beta-avg.png", bbox_inches="tight")
+        plt.xlabel("beta")
+        plt.ylabel("średnia waga rozwiązania")
+        plt.suptitle(r"Wpływ parametru beta na średni wynik metaheurystyki")
+        plt.title(r"{}, $\alpha = 0.5$, $\gamma = 0.3$, $\delta = 0.3$".format(testcases[i]))
+        plt.savefig("plots/sa-tuning-beta-avg-{}.png".format(testcases[i]), bbox_inches="tight")
 
-    plt.clf()
     for i in range(len(testcases)):
+        plt.clf()
         plt.plot(beta_changes[i], time_changes[i], label=testcases[i])
-    plt.xlabel("beta")
-    plt.ylabel("średni czas działania")
-    plt.suptitle(r"Wpływ parametru beta na czas działania metaheurystyki")
-    plt.title(r"$\alpha = 0.5$, $\gamma = 0.3$, $\delta = 0.3$")
-    plt.savefig("plots/sa-tuning-beta-time.png", bbox_inches="tight")
+        plt.xlabel("beta")
+        plt.ylabel("średni czas działania")
+        plt.suptitle(r"Wpływ parametru beta na czas działania metaheurystyki")
+        plt.title(r"{}, $\alpha = 0.5$, $\gamma = 0.3$, $\delta = 0.3$".format(testcases[i]))
+        plt.savefig("plots/sa-tuning-beta-time-{}.png".format(testcases[i]), bbox_inches="tight")
 
 
     for testcase in testcases:
@@ -332,21 +332,21 @@ def analyze_sa_tuning(testcases):
         time_df_heatmap_data = time_df.pivot('gamma', 'delta', 'średni czas działania')
 
         plt.clf()
-        sns.heatmap(min_df_heatmap_data, cmap='viridis', annot=True, fmt='.2f', linewidths=.5)
+        sns.heatmap(min_df_heatmap_data, cmap='viridis', fmt='.2f', linewidths=.5)
         plt.suptitle(r"Wpływ parametrów gamma i delta na najlepszy wynik metaheurystyki")
-        plt.title(r"$\alpha = 0.5$, $\beta = 0.9$")
+        plt.title(r"{}, $\alpha = 0.5$, $\beta = 0.9$".format(testcase))
         plt.savefig("plots/sa-tuning-gamma-delta-min-{}.png".format(testcase), bbox_inches="tight")
 
         plt.clf()
-        sns.heatmap(avg_df_heatmap_data, cmap='viridis', annot=True, fmt='.2f', linewidths=.5)
+        sns.heatmap(avg_df_heatmap_data, cmap='viridis', fmt='.2f', linewidths=.5)
         plt.suptitle(r"Wpływ parametrów gamma i delta na średni wynik metaheurystyki")
-        plt.title(r"$\alpha = 0.5$, $\beta = 0.9$")
+        plt.title(r"{}, $\alpha = 0.5$, $\beta = 0.9$".format(testcase))
         plt.savefig("plots/sa-tuning-gamma-delta-avg-{}.png".format(testcase), bbox_inches="tight")
 
         plt.clf()
-        sns.heatmap(time_df_heatmap_data, cmap='viridis', annot=True, fmt='.2f', linewidths=.5)
+        sns.heatmap(time_df_heatmap_data, cmap='viridis', fmt='.2f', linewidths=.5)
         plt.suptitle(r"Wpływ parametrów gamma i delta na średni czas działania metaheurystyki")
-        plt.title(r"$\alpha = 0.5$, $\beta = 0.9$")
+        plt.title(r"{}, $\alpha = 0.5$, $\beta = 0.9$".format(testcase))
         plt.savefig("plots/sa-tuning-gamma-delta-time-{}.png".format(testcase), bbox_inches="tight")
 
     
@@ -371,18 +371,21 @@ def analyze_ts_tuning(testcases):
         time_df_heatmap_data = time_df.pivot('alpha', 'beta', 'średni czas działania')
 
         plt.clf()
-        sns.heatmap(min_df_heatmap_data, cmap='viridis', annot=True, fmt='.2f', linewidths=.5)
-        plt.title(r"Wpływ parametrów alpha i beta na najlepszy wynik metaheurystyki")
+        sns.heatmap(min_df_heatmap_data, cmap='viridis', fmt='.2f', linewidths=.5)
+        plt.suptitle(r"Wpływ parametrów alpha i beta na najlepszy wynik metaheurystyki")
+        plt.title("dla " + testcase)
         plt.savefig("plots/ts-tuning-alpha-beta-min-{}.png".format(testcase), bbox_inches="tight")
 
         plt.clf()
-        sns.heatmap(avg_df_heatmap_data, cmap='viridis', annot=True, fmt='.2f', linewidths=.5)
-        plt.title(r"Wpływ parametrów alpha i beta na średni wynik metaheurystyki")
+        sns.heatmap(avg_df_heatmap_data, cmap='viridis', fmt='.2f', linewidths=.5)
+        plt.suptitle(r"Wpływ parametrów alpha i beta na średni wynik metaheurystyki")
+        plt.title("dla " + testcase)
         plt.savefig("plots/ts-tuning-alpha-beta-avg-{}.png".format(testcase), bbox_inches="tight")
 
         plt.clf()
-        sns.heatmap(time_df_heatmap_data, cmap='viridis', annot=True, fmt='.2f', linewidths=.5)
-        plt.title(r"Wpływ parametrów alpha i beta na średni czas działania metaheurystyki")
+        sns.heatmap(time_df_heatmap_data, cmap='viridis', fmt='.2f', linewidths=.5)
+        plt.suptitle(r"Wpływ parametrów alpha i beta na średni czas działania metaheurystyki")
+        plt.title("dla " + testcase)
         plt.savefig("plots/ts-tuning-alpha-beta-time-{}.png".format(testcase), bbox_inches="tight")
 
 
@@ -438,5 +441,5 @@ for testcase in TESTCASES:
     # alpha, beta, min_result, avg_result, time_per_rep = read_ts_tuning_results(testcase)
     # analyze_ts_tuning(alpha, beta, min_result, avg_result, time_per_rep, testcase)
 
-analyze_sa_tuning(TESTCASES[:2])
-analyze_ts_tuning(TESTCASES[:2])
+analyze_sa_tuning(TESTCASES[:3])
+analyze_ts_tuning(TESTCASES[:3])
