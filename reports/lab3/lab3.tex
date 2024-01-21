@@ -1,0 +1,167 @@
+\documentclass{article}
+\usepackage[top=3cm, bottom=3cm, left = 2cm, right = 2cm]{geometry}
+\geometry{a4paper}
+\usepackage[T1]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{titling}
+\usepackage{caption}
+\usepackage[parfill]{parskip}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usepackage{subcaption}
+\usepackage{pgffor}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+
+\begin{titlingpage}
+    \title{Algorytmy metaheurystyczne\\[1ex] \large Problem komiwojażera euklidesowego. Algorytm genetyczny. Algorytm memetyczny.}
+    \author{Karol Janic}
+    \date{21 stycznia 2024}
+
+    \maketitle
+\end{titlingpage}
+
+\tableofcontents
+
+\newpage
+
+\section{Cel zadania}
+Celem zadania jest sprawdzenie skuteczności algorytmu genetycznego oraz algorytmu memetycznego na przykładzie euklidesowego problemu komiwojażera oraz
+zbadanie wpływu wyboru parametrów tych heurystyk na jakość rozwiązania.
+
+\section{Dane testowe}
+Opisane wyżej metaheurystyki zostały nastrojone oraz testowane na przykładach z \url{https://www.math.uwaterloo.ca/tsp/vlsi/index.html}.
+
+\section{Algorytm genetyczny}
+Algorytm genetyczny jest heurystyką inspirowaną ewolucją biologiczną. W każdej iteracji algorytmu tworzona jest nowa populacja osobników, która jest następnie poddawana krzyżowaniu i mutacji.
+Populacje rozdzielone są na wyspy, które są od siebie izolowane. Co pewną liczbę epok populacje są wymieniane między wyspami. W ten sposób algorytm może uniknąć zatrzymania się w lokalnym optimum.
+Dodatkowo rozwiązania mogą być ulepszane przez algorytm lokalnego przeszukiwania, np. algorytm Local Search.
+
+
+\subsection{Wybór parametrów}
+\begin{itemize}
+    \item Rozmiar populacji: 64
+    \item Liczba wysp: 8
+    \item Liczba epok: 10
+    \item Liczba iteracji w epoce: 1000
+    \item Prawdopodobieństwo krzyżowania: 0.8
+    \item Prawdopodobieństwo mutacji: 0.1
+\end{itemize}
+
+\subsection{Mutacje}
+\begin{itemize}
+    \item Zamiana dwóch losowych wierzchołków
+    \item Odwrócenie kolejności wierzchołków między dwoma losowymi wierzchołkami
+\end{itemize}
+
+\subsection{Krzyżowanie}
+\begin{itemize}
+    \item PMX(Partially Mapped Crossover) polega na wybraniu losowego fragmentu jednego z rodziców i przepisaniu go do dziecka. Następnie wypełniane są brakujące wierzchołki z drugiego rodzica w kolejności występowania w nim.
+    \item OX(Order Crossover) polega na wybraniu losowego fragmentu jednego z rodziców i przepisaniu go do dziecka. Następnie wypełniane są brakujące wierzchołki z drugiego rodzica w kolejności występowania w nim, ale bez powtórzeń.
+    \item CX(Cycle Crossover) polega na wybraniu losowego cyklu z jednego z rodziców i przepisaniu go do dziecka. Następnie wypełniane są brakujące wierzchołki z drugiego rodzica w kolejności występowania w nim, ale bez powtórzeń.
+\end{itemize}
+
+\subsection{Lokalna poprawa rozwiązania}
+Wykorzystywany jest algorytm Local Search z losowym sąsiedztwem typu INVERT.
+
+\newpage
+
+\section{Wyniki}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multirow{3}{*}{Przykład} & Genetyczy & Memetyczny & Genetyczny & Memetyczny  & Genetyczny & Memetyczny  \\
+        & PMX  & PMX & OX & OX & CX & CX \\
+        \hline
+        xqf131 & 635 & 582 & 598 & 580 & 630 & 589 \\
+        \hline
+        xqg237 & 1206 & 1097 & 1148 & 1090 & 1213 & 1087 \\
+        \hline
+        pma343 & 1896 & 1454 & 1736 & 1466 & 1872 & 1461 \\
+        \hline
+        pka379 & 1930 & 1428 & 1769 & 1431 & 1920 & 1438 \\
+        \hline
+        bcl380 & 2534 & 1786 & 2349 & 1799 & 2549 & 1796 \\
+        \hline
+        pbl395 & 2002 & 1392 & 1860 & 1407 & 1977 & 1406 \\
+        \hline
+        pbk411 & 2200 & 1480 & 2033 & 1470 & 2173 & 1483 \\
+        \hline
+        pbn423 & 2261 & 1516 & 2114 & 1511 & 2289 & 1509 \\
+        \hline
+        pbm436 & 2446 & 1574 & 2272 & 1576 & 2460 & 1587 \\
+        \hline
+        xql662 & 6175 & 2777 & 5646 & 2770 & 6195 & 2809 \\
+        \hline
+        xit1083 & 15016 & 4009 & 13464 & 4021 & 15069 & 4011\\
+        \hline
+        icw1483 & 25768 & 4979 & 22766 & 5007 & 25949 & 5038 \\
+        \hline
+        djc1785 & 43547 & 6896 & 37660 & 6913 & 43308 & 6927 \\
+        \hline
+        dcb2086 & 59801 & 7525 & 51310 & 7530 & 59914 & 7503 \\
+        \hline
+        pds2566 & 86694 & 8756 & 73254 & 8806 & 86744 & 8787 \\
+        \hline
+    \end{tabular}
+    \caption{Średnie wagi rozwiązań znalezionych przez algorytmy genetyczne i memetyczne}
+\end{table}
+
+\section{Porównanie zaimplementowanych heurystyk}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        Przykład & Opt & MST & LS & SA  & TS & MA \\
+        \hline
+        xqf131 & 564 & 718 & 612 & 580 & 602 & 582 \\
+        \hline
+        xqg237 & 1019 & 1445 & 1115 & 1056 & 1089 & 1087 \\
+        \hline
+        pma343 & 1368 & 1883 & 1484 & 1395 & 1454 & 1461 \\
+        \hline
+        pka379 & 1332 & 1855 & 1445 & 1380 & 1398 & 1438 \\
+        \hline
+        bcl380 & 1621 & 2319 & 1817 & 1730 & 1750 & 1796 \\
+        \hline
+        pbl395 & 1281 & 1871 & 1429 & 1363 & 1377 & 1406 \\
+        \hline
+        pbk411 & 1343 & 1935 & 1488 & 1431 & 1433 & 1483 \\
+        \hline
+        pbn423 & 1365 & 1918 & 1521 & 1457 & 1468 & 1509 \\
+        \hline
+        pbm436 & 1443 & 2119 & 1612 & 1540 & 1563 & 1587 \\
+        \hline
+        xql662 & 2513 & 3691 & 2813 & 2682 & 2699 & 2809 \\
+        \hline
+        xit1083 & 3558 & 5190 & 4021 & 3825 & 3909 & 4011 \\
+        \hline
+        icw1483 & 4416 & 6754 & 4990 & 4731 & 4739 & 5038 \\
+        \hline
+        djc1785 & 6115 & 8908 & 6872 & 6545 & 6470 & 6927 \\
+        \hline
+        dcb2086 & 6600 & 9777 & 7457 & 7129 & 7171 & 7503 \\
+        \hline
+        pds2566 & 7643 & 11427 & 8701 & 8225 & 8377 & 8787 \\
+        \hline
+    \end{tabular}
+    \caption{Porównanie wyników: Rozwiązania budowane na podstawie MST, Local Search, Symulowanego Wyżarzania, Tabu Search, Algorytmu Memetycznego.}
+\end{table}
+
+\subsection{Ranking zaimplementowanych algorytmów}
+\begin{enumerate}
+    \item Symulowane Wyżarzanie
+    \item Tabu Search
+    \item Algorytm Memetyczny
+    \item Local Search
+    \item Rozwiązanie oparte na MST
+\end{enumerate}
+
+\end{document}

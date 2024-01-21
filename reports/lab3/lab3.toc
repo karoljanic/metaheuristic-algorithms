@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Cel zadania}{2}{section.1}%
+\contentsline {section}{\numberline {2}Dane testowe}{2}{section.2}%
+\contentsline {section}{\numberline {3}Algorytm genetyczny}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Wybór parametrów}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Mutacje}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Krzyżowanie}{2}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Lokalna poprawa rozwiązania}{2}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Wyniki}{3}{section.4}%
+\contentsline {section}{\numberline {5}Porównanie zaimplementowanych heurystyk}{3}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Ranking zaimplementowanych algorytmów}{3}{subsection.5.1}%
