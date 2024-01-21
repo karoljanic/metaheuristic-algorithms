@@ -10,11 +10,15 @@ struct TSParallelRunResult {
     std::vector<size_t> cycleWithMinWeight;
 };
 
-void tabuSearchWithFullNeighbourhood(std::vector<size_t> &cycle, const std::vector<Coordinate> &points, double alpha,
-                                     double beta) {
+void
+tabuSearchWithFullNeighbourhood(std::vector<size_t> &cycle, const std::vector<Coordinate> &points,
+                                double alpha = 0.1,
+                                double beta = 0.1) {
     const size_t n{cycle.size()};
-    const size_t tabuListSize{static_cast<size_t>(static_cast<double>(n) * alpha)};
-    const size_t maxIterationsWithoutImprovement{static_cast<size_t>(static_cast<double>(n) * beta)};
+//    const size_t tabuListSize{static_cast<size_t>(static_cast<double>(n) * alpha)};
+    const size_t tabuListSize{7};
+//    const size_t maxIterationsWithoutImprovement{static_cast<size_t>(static_cast<double>(n) * beta)};
+    const size_t maxIterationsWithoutImprovement{1};
 
     std::vector<std::pair<size_t, size_t>> inversions;
     for (size_t i = 0; i < n - 1; i++) {
@@ -87,11 +91,15 @@ void tabuSearchWithFullNeighbourhood(std::vector<size_t> &cycle, const std::vect
 
 
 void
-tabuSearchWithRandomPartNeighbourhood(std::vector<size_t> &cycle, const std::vector<Coordinate> &points, double alpha,
-                                      double beta) {
+tabuSearchWithRandomPartNeighbourhood(std::vector<size_t> &cycle, const std::vector<Coordinate> &points,
+                                      double alpha = 0.1,
+                                      double beta = 0.1) {
     const size_t n{cycle.size()};
-    const size_t tabuListSize{static_cast<size_t>(static_cast<double>(n) * alpha)};
-    const size_t maxIterationsWithoutImprovement{static_cast<size_t>(static_cast<double>(n) * beta)};
+//    const size_t tabuListSize{static_cast<size_t>(static_cast<double>(n) * alpha)};
+    const size_t tabuListSize{7};
+//    const size_t maxIterationsWithoutImprovement{static_cast<size_t>(static_cast<double>(n) * beta)};
+    const size_t maxIterationsWithoutImprovement{1};
+
 
     std::vector<std::pair<size_t, size_t>> inversions;
     for (size_t i = 0; i < n - 1; i++) {

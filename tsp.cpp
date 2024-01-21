@@ -1,12 +1,12 @@
 #include <iostream>
 #include <fstream>
-#include <thread>
 #include <functional>
 
 #include "utils.hpp"
 #include "local-search.hpp"
 #include "simulated-annealing.hpp"
 #include "tabu-search.hpp"
+#include "genetic.hpp"
 
 constexpr bool GENERATE_RANDOM_CYCLE_TEST = false;
 constexpr bool GENERATE_MST_BASE_CYCLE_TEST = false;
@@ -15,13 +15,15 @@ constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_MST_TEST = false;
 constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_TEST = false;
 constexpr bool GENERATE_LOCAL_SEARCH_BEGIN_RANDOM_NEIGHBOURHOOD_RANDOM_TEST = false;
 
-constexpr bool GENERATE_SIMULATED_ANNEALING_TEST = true;
+constexpr bool GENERATE_SIMULATED_ANNEALING_TEST = false;
 constexpr bool GENERATE_TABU_SEARCH_TEST = false;
 
+constexpr bool GENERATE_GENETIC_ALGORITHM = true;
+
 const std::vector<std::string> testCases{
-        "xqf131", "xqg237", /*"pma343", "pka379", "bcl380",
-                                          "pbl395", "pbk411", "pbn423", "pbm436", "xql662",
-                                          "xit1083", "icw1483", "djc1785", "dcb2086", "pds2566"*/};
+        "xqf131", "xqg237", "pma343", "pka379", "bcl380",
+        "pbl395", "pbk411", "pbn423", "pbm436", "xql662",
+        "xit1083", "icw1483", "djc1785", "dcb2086", "pds2566"};
 
 std::string readTest(const std::string &testCase, std::vector<Coordinate> &points) {
     std::ifstream inputFile{"examples/" + testCase + ".tsp"};
@@ -267,6 +269,46 @@ void testTabuSearch(const std::vector<Coordinate> &points, const std::string &te
     }
 }
 
+void testGeneticAlgorithm(const std::vector<Coordinate> &points, const std::string &testCaseName) {
+    constexpr size_t REPS{5};
+    constexpr size_t POPULATION_SIZE{64};
+    constexpr size_t ISLANDS_NUMBER{8};
+    constexpr size_t EPOCHS_NUMBER{10};
+    constexpr size_t ITERATIONS_PER_EPOCH_NUMBER{100};
+    constexpr float CROSS_PROBABILITY{0.8};
+    constexpr float MUTATION_PROBABILITY{0.1};
+
+    std::mt19937 gen{std::random_device{}()};
+
+    std::vector<int_fast32_t> randomCycleWeights{};
+    for (size_t rep = 0; rep < REPS; rep++) {
+        std::cout << rep << std::endl;
+        Individual cycle;
+        for (size_t vertex = 1; vertex <= points.size(); vertex++) {
+            cycle.first.push_back(vertex);
+        }
+        std::shuffle(cycle.first.begin(), cycle.first.end(), gen);
+
+        genetic(cycle, points, POPULATION_SIZE, ISLANDS_NUMBER, EPOCHS_NUMBER, ITERATIONS_PER_EPOCH_NUMBER,
+                CrossType::ORDER_CROSSOVER, CROSS_PROBABILITY, MUTATION_PROBABILITY, gen);
+
+        randomCycleWeights.push_back(cycleWeight(points, cycle.first));
+    }
+
+    std::int_fast64_t sum = 0;
+    for (const auto &cycleWeight: randomCycleWeights) {
+        sum += cycleWeight;
+    }
+
+    std::ofstream outputFile{"results/" + testCaseName + "-ga-ox-mem.txt"};
+    outputFile << POPULATION_SIZE << " " << ISLANDS_NUMBER << " " << EPOCHS_NUMBER << " " << ITERATIONS_PER_EPOCH_NUMBER
+               << std::endl;
+    for (const auto &cycleWeight: randomCycleWeights) {
+        outputFile << cycleWeight << std::endl;
+    }
+    outputFile << static_cast<double>(sum) / static_cast<double>(REPS) << std::endl;
+}
+
 int main(int /*arg*/, char ** /*argv*/) {
     for (const auto &testCase: testCases) {
         std::vector<Coordinate> points; // point with id ID is points[ID - 1]
@@ -297,6 +339,9 @@ int main(int /*arg*/, char ** /*argv*/) {
             //testTabuSearch(points, testCaseName, InitialSolutionType::RANDOM, false);
             //testTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED, true);
             //testTabuSearch(points, testCaseName, InitialSolutionType::MST_BASED, false);
+        }
+        if (GENERATE_GENETIC_ALGORITHM) {
+            testGeneticAlgorithm(points, testCaseName);
         }
     }
 
